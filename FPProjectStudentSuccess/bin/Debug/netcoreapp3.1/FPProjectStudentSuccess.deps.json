@@ -8,12 +8,32 @@
     ".NETCoreApp,Version=v3.1": {
       "FPProjectStudentSuccess/1.0.0": {
         "dependencies": {
+          "MaterialDesignThemes": "2.5.1",
           "Microsoft.EntityFrameworkCore": "3.1.22",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.22",
           "Microsoft.EntityFrameworkCore.Tools": "3.1.22"
         },
         "runtime": {
           "FPProjectStudentSuccess.dll": {}
+        }
+      },
+      "MaterialDesignColors/1.1.2": {
+        "runtime": {
+          "lib/net45/MaterialDesignColors.dll": {
+            "assemblyVersion": "1.1.2.0",
+            "fileVersion": "1.1.2.0"
+          }
+        }
+      },
+      "MaterialDesignThemes/2.5.1": {
+        "dependencies": {
+          "MaterialDesignColors": "1.1.2"
+        },
+        "runtime": {
+          "lib/net45/MaterialDesignThemes.Wpf.dll": {
+            "assemblyVersion": "2.5.1.1345",
+            "fileVersion": "2.5.1.1345"
+          }
         }
       },
       "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
@@ -1013,6 +1033,20 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "MaterialDesignColors/1.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UKGf8lKSTJfUjgQwlDMwxFC2IJuUP59AquSF8D02j8V8gCG47B0Zmekd5ycHKrDP515zmbHGFwo6G5mpGVdDuQ==",
+      "path": "materialdesigncolors/1.1.2",
+      "hashPath": "materialdesigncolors.1.1.2.nupkg.sha512"
+    },
+    "MaterialDesignThemes/2.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ma1x0Ki+EF+zXzCEfGBlRt80qT726v1156FxJjUQDFS831sEw/HnYkZRt7bL/cqAA+mzLVHjxh93bur2uRGm3A==",
+      "path": "materialdesignthemes/2.5.1",
+      "hashPath": "materialdesignthemes.2.5.1.nupkg.sha512"
     },
     "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
       "type": "package",

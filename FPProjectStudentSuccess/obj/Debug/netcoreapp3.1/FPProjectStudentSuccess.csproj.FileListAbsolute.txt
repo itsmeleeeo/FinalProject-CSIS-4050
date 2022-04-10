@@ -192,3 +192,13 @@ C:\Users\leeeo\Documents\Douglas College - 7th Semester\CSIS 4050 - Advanced OO 
 C:\Users\leeeo\Documents\Douglas College - 7th Semester\CSIS 4050 - Advanced OO Prog for Bus App\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\obj\Debug\netcoreapp3.1\SalesmenView.baml
 C:\Users\leeeo\Documents\Douglas College - 7th Semester\CSIS 4050 - Advanced OO Prog for Bus App\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\obj\Debug\netcoreapp3.1\StockMenuView.baml
 >>>>>>> f06641d17609aca2f472913b04cdfdde435bde33
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\bin\Debug\netcoreapp3.1\MaterialDesignColors.dll
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\bin\Debug\netcoreapp3.1\MaterialDesignThemes.Wpf.dll
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\obj\Debug\netcoreapp3.1\EmployeeView.g.cs
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\obj\Debug\netcoreapp3.1\ProductView.g.cs
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\obj\Debug\netcoreapp3.1\SalesmenView.g.cs
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\obj\Debug\netcoreapp3.1\StockMenuView.g.cs
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\obj\Debug\netcoreapp3.1\EmployeeView.baml
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\obj\Debug\netcoreapp3.1\ProductView.baml
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\obj\Debug\netcoreapp3.1\SalesmenView.baml
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\obj\Debug\netcoreapp3.1\StockMenuView.baml

@@ -14,19 +14,19 @@ using System.Windows.Shapes;
 namespace FPProjectStudentSuccess
 {
     /// <summary>
-    /// Interaction logic for AdminOverview.xaml
+    /// Interaction logic for StockMenuView.xaml
     /// </summary>
-    public partial class AdminOverview : Window
+    public partial class StockMenuView : Window
     {
         bool isClosed = false;
-        public AdminOverview()
+        public StockMenuView()
         {
             InitializeComponent();
+
             //Event Handlers
             btnMenu.Click += OpenAndCloseMenu;
             productsMenu.Click += OpenProductPage;
             salesmenMenu.Click += OpenSalesmenPage;
-            stockMenu.Click += OpenStockPage;
             employeeMenu.Click += OpenEmployeePage;
             logout.Click += Logout;
 
@@ -38,6 +38,7 @@ namespace FPProjectStudentSuccess
             employeeMenu.Visibility = Visibility.Hidden;
             logout.Visibility = Visibility.Hidden;
         }
+
         //Function responsible to open and close the menu sidebar
         private void OpenAndCloseMenu(object o, RoutedEventArgs rea)
         {
@@ -71,9 +72,9 @@ namespace FPProjectStudentSuccess
             ProductView wProductView = new ProductView();
             wProductView.Show();
 
-            foreach(Window window in Application.Current.Windows)
+            foreach (Window window in Application.Current.Windows)
             {
-                if(window.GetType() == typeof(AdminOverview))
+                if (window.GetType() == typeof(StockMenuView))
                 {
                     window.Close();
                 }
@@ -85,23 +86,9 @@ namespace FPProjectStudentSuccess
             SalesmenView wSalesmenView = new SalesmenView();
             wSalesmenView.Show();
 
-            foreach(Window window in Application.Current.Windows)
+            foreach (Window window in Application.Current.Windows)
             {
-                if(window.GetType() == typeof(AdminOverview))
-                {
-                    window.Close();
-                }
-            }
-        }
-
-        private void OpenStockPage(object o, RoutedEventArgs rea)
-        {
-            StockMenuView wstockMenuView = new StockMenuView();
-            wstockMenuView.Show();
-
-            foreach(Window window in Application.Current.Windows)
-            {
-                if(window.GetType() == typeof(AdminOverview))
+                if (window.GetType() == typeof(StockMenuView))
                 {
                     window.Close();
                 }
@@ -113,9 +100,9 @@ namespace FPProjectStudentSuccess
             EmployeeView wEmployeeView = new EmployeeView();
             wEmployeeView.Show();
 
-            foreach(Window window in Application.Current.Windows)
+            foreach (Window window in Application.Current.Windows)
             {
-                if(window.GetType() == typeof(AdminOverview))
+                if (window.GetType() == typeof(StockMenuView))
                 {
                     window.Close();
                 }
@@ -127,9 +114,9 @@ namespace FPProjectStudentSuccess
             MainWindow wMainWindow = new MainWindow();
             wMainWindow.Show();
 
-            foreach(Window window in Application.Current.Windows)
+            foreach (Window window in Application.Current.Windows)
             {
-                if(window.GetType() == typeof(AdminOverview))
+                if (window.GetType() == typeof(StockMenuView))
                 {
                     window.Close();
                 }

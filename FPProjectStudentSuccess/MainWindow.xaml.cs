@@ -56,8 +56,8 @@ namespace FPProjectStudentSuccess
         {
             using (var ctx = new FPProjectStudentSuccessDBContext())
             {
-                string username = txtAdminLogin.Text;
-                string password = txtAdminPass.Text;
+                string username = txtAdminLogin.Text.ToLower();
+                string password = txtAdminPass.Text.ToLower();
 
                 var login = ctx.Users.Where(x => x.Username.StartsWith(username)).FirstOrDefault();
                 var pass = ctx.Users.Where(x => x.Password.StartsWith(password)).FirstOrDefault();
@@ -72,13 +72,16 @@ namespace FPProjectStudentSuccess
                 }
                 else
                 {
-                    Main.Content = new AdminOverview();
-                    btnLogin.Visibility = Visibility.Hidden;
-                    txtAdminLogin.Visibility = Visibility.Hidden;
-                    txtAdminPass.Visibility = Visibility.Hidden;
-                    lblLogin.Visibility = Visibility.Hidden;
-                    lblPass.Visibility = Visibility.Hidden;
-                    lblLogo.Visibility = Visibility.Hidden;
+                    AdminOverview wAdminOverview = new AdminOverview();
+                    wAdminOverview.Show();
+
+                    foreach(Window window in Application.Current.Windows)
+                    {
+                        if(window.GetType() == typeof(MainWindow))
+                        {
+                            window.Close();
+                        }
+                    }
                 }
             }
         }

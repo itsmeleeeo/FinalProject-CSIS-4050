@@ -4,3 +4,12 @@ C:\Temp\FPProjectStudentSuccess\FPProjectStudentSuccessDB\bin\Debug\FPProjectStu
 C:\Temp\FPProjectStudentSuccess\FPProjectStudentSuccessDB\obj\Debug\FPProjectStudentSuccessDB.sqlproj.AssemblyReference.cache
 C:\Temp\FPProjectStudentSuccess\FPProjectStudentSuccessDB\obj\Debug\FPProjectStudentSuccessDB.dll
 C:\Temp\FPProjectStudentSuccess\FPProjectStudentSuccessDB\obj\Debug\FPProjectStudentSuccessDB.pdb
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessDB\bin\Debug\FPProjectStudentSuccessDB.dacpac
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessDB\bin\Debug\FPProjectStudentSuccessDB.dll
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessDB\bin\Debug\FPProjectStudentSuccessDB.pdb
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessDB\obj\Debug\Model.xml
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessDB\obj\Debug\refactor.xml
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessDB\obj\Debug\postdeploy.sql
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessDB\obj\Debug\predeploy.sql
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessDB\obj\Debug\FPProjectStudentSuccessDB.dll
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessDB\obj\Debug\FPProjectStudentSuccessDB.pdb

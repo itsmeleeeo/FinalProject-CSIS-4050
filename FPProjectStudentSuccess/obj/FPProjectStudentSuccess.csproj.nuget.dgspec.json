@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Temp\\FPProjectStudentSuccess\\FPProjectStudentSuccess\\FPProjectStudentSuccess.csproj": {}
+    "C:\\Temp\\FPProjectStudentSuccess\\FinalProject-CSIS-4050\\FPProjectStudentSuccess\\FPProjectStudentSuccess.csproj": {}
   },
   "projects": {
-    "C:\\Temp\\FPProjectStudentSuccess\\FPProjectStudentSuccess\\FPProjectStudentSuccess.csproj": {
+    "C:\\Temp\\FPProjectStudentSuccess\\FinalProject-CSIS-4050\\FPProjectStudentSuccess\\FPProjectStudentSuccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Temp\\FPProjectStudentSuccess\\FPProjectStudentSuccess\\FPProjectStudentSuccess.csproj",
+        "projectUniqueName": "C:\\Temp\\FPProjectStudentSuccess\\FinalProject-CSIS-4050\\FPProjectStudentSuccess\\FPProjectStudentSuccess.csproj",
         "projectName": "FPProjectStudentSuccess",
-        "projectPath": "C:\\Temp\\FPProjectStudentSuccess\\FPProjectStudentSuccess\\FPProjectStudentSuccess.csproj",
+        "projectPath": "C:\\Temp\\FPProjectStudentSuccess\\FinalProject-CSIS-4050\\FPProjectStudentSuccess\\FPProjectStudentSuccess.csproj",
         "packagesPath": "C:\\Users\\henri\\.nuget\\packages\\",
-        "outputPath": "C:\\Temp\\FPProjectStudentSuccess\\FPProjectStudentSuccess\\obj\\",
+        "outputPath": "C:\\Temp\\FPProjectStudentSuccess\\FinalProject-CSIS-4050\\FPProjectStudentSuccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -56,6 +56,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[3.1.22, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.3, )"
             }
           },
           "imports": [

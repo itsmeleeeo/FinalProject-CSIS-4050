@@ -1,0 +1,56 @@
+﻿<AuthorizeView>
+    @page "/viewstock"
+    @using FPProjectStudentSuccess.Entities;
+
+    @inject FPProjectStudentSuccessBSA.Service.ProductService PdtSrv
+
+        <h3>View Stock</h3>
+        <table class="table">
+            <thead class="thead">
+                <tr>
+                    <th>Name</th>
+                    <th>Publisher</th>
+                    <th>Platform</th>
+                    <th>Year</th>
+                    <th>Price</th>
+                    <th>Shelf</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (productList != null)
+                {
+                    @foreach (var pdt in productList)
+                    {
+                        <tr>
+                            <td>@pdt.Name</td>
+                            <td>@pdt.Publisher</td>
+                            <td>@pdt.PlataformId</td>
+                            <td>@pdt.Year</td>
+                            <td>@pdt.Price</td>
+                            <td>@pdt.ShelfId</td>
+                            <td>@pdt.Quantity</td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <p><em>Loading...</em></p>
+                }
+            </tbody>
+        </table>
+</AuthorizeView>
+
+@code {
+    public List<Product> productList = new List<Product>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadData();
+    }
+
+    protected async Task LoadData()
+    {
+        productList = await PdtSrv.GetProductsAsync();
+    }
+}

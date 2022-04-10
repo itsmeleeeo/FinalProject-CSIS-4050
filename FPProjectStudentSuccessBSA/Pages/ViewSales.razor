@@ -1,0 +1,51 @@
+﻿<AuthorizeView>
+    @page "/viewsales"
+    @using FPProjectStudentSuccess.Entities;
+
+    @inject FPProjectStudentSuccessBSA.Service.SalesService SaleSrv
+
+    <h3>View Sales</h3>
+    <table class="table">
+        <thead class="thead">
+            <tr>
+                <th>Product Name</th>
+                <th>Quantity</th>
+                <th>Sales Total</th>
+                <th>Salesperson</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (salesList != null)
+                {
+            @foreach (var sale in salesList)
+                    {
+            <tr>
+                <td>@sale.ProductName</td>
+                <td>@sale.Quantity</td>
+                <td>@sale.SalesTotal</td>
+                <td>@context.User.Identity.Name</td>
+                <td></td>
+            </tr>
+                    }
+                }
+                else
+                {
+            <p><em>Loading...</em></p>
+                }
+        </tbody>
+    </table>
+</AuthorizeView>
+
+@code {
+    public List<Sales> salesList = new List<Sales>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadData();
+    }
+
+    protected async Task LoadData()
+    {
+        salesList = await SaleSrv.GetSalesAsync();
+    }
+}

@@ -5,8 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FPProjectStudentSuccess"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Game Depot Admin View" Height="450" Width="800">
     <Grid>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Background="#f2f2f2" Grid.Column="1" Height="auto" HorizontalAlignment="Stretch">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Border BorderBrush="White" BorderThickness="0 0 1 0" Grid.Column="0" Grid.ColumnSpan="3">
+                <TextBox x:Name="txtAdminLogin" HorizontalAlignment="Left" Height="34" Margin="10,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="283"/>
+            </Border>
+            <Border BorderBrush="White" BorderThickness="0 0 1 0" Grid.Column="0" Grid.ColumnSpan="3">
+                <TextBox x:Name="txtAdminPass" HorizontalAlignment="Left" Height="34" Margin="10,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="283"/>
+            </Border>
+            <Border BorderBrush="White" BorderThickness="0 0 1 0" Grid.Column="0" Grid.ColumnSpan="3">
+                <Label x:Name="lblLogo" Content="Game Depot" HorizontalAlignment="Center" Margin="90,10,0,0" VerticalAlignment="Top" FontFamily="Corbel" FontSize="36"/>
+            </Border>
+            <Border BorderBrush="White" BorderThickness="0 0 1 0" Grid.Column="0" Grid.ColumnSpan="3">
+                <Label x:Name="lblLogin" Content="Login" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top" FontFamily="Corbel" FontSize="14"/>
+            </Border>
+            <Border BorderBrush="White" BorderThickness="0 0 1 0" Grid.Column="0" Grid.ColumnSpan="3">
+                <Label x:Name="lblPass" Content="Password" HorizontalAlignment="Left" Margin="10,178,0,0" VerticalAlignment="Top" FontFamily="Corbel" FontSize="14"/>
+            </Border>
+            <Border BorderBrush="White" BorderThickness="0 0 1 0" Grid.Column="0" Grid.ColumnSpan="3">
+                <Button x:Name="btnLogin" Content="Login" HorizontalAlignment="Left" Margin="10,261,0,0" VerticalAlignment="Top" Width="115" Height="35"/>
+            </Border>
+        </Grid>
+        <Frame x:Name="Main" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

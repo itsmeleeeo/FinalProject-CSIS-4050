@@ -1,0 +1,6 @@
+C:\Temp\FPProjectStudentSuccess\FPProjectStudentSuccessDB\bin\Debug\FPProjectStudentSuccessDB.dacpac
+C:\Temp\FPProjectStudentSuccess\FPProjectStudentSuccessDB\bin\Debug\FPProjectStudentSuccessDB.dll
+C:\Temp\FPProjectStudentSuccess\FPProjectStudentSuccessDB\bin\Debug\FPProjectStudentSuccessDB.pdb
+C:\Temp\FPProjectStudentSuccess\FPProjectStudentSuccessDB\obj\Debug\FPProjectStudentSuccessDB.sqlproj.AssemblyReference.cache
+C:\Temp\FPProjectStudentSuccess\FPProjectStudentSuccessDB\obj\Debug\FPProjectStudentSuccessDB.dll
+C:\Temp\FPProjectStudentSuccess\FPProjectStudentSuccessDB\obj\Debug\FPProjectStudentSuccessDB.pdb

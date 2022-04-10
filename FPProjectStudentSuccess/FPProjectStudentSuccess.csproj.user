@@ -7,7 +7,39 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="AdminOverview.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="EmployeeView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ProductView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SalesmenView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="StockMenuView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="AdminOverview.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="EmployeeView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ProductView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SalesmenView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="StockMenuView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

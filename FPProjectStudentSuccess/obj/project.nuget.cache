@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "5lr/l6fSdDRn0siv8p6MfA5duvpVlv8kIGFRf/LRKl24WId+M5m1Zxm4IthGb2x9lqsMWLOMyDnSDI6fLi7m2w==",
+  "dgSpecHash": "RmGJVdNaKLxeR1Kn8oDGvWJOMZ1KADl6xN7yhsfuSuJAyuujrG11/ZLMXgQV2TtjebhyvOu3BwGV5XWPeUGPvg==",
   "success": true,
   "projectFilePath": "C:\\Temp\\FPProjectStudentSuccess\\FinalProject-CSIS-4050\\FPProjectStudentSuccess\\FPProjectStudentSuccess.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\henri\\.nuget\\packages\\materialdesigncolors\\1.1.2\\materialdesigncolors.1.1.2.nupkg.sha512",
+    "C:\\Users\\henri\\.nuget\\packages\\materialdesignthemes\\2.5.1\\materialdesignthemes.2.5.1.nupkg.sha512",
     "C:\\Users\\henri\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\henri\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",
     "C:\\Users\\henri\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
@@ -106,5 +108,32 @@
     "C:\\Users\\henri\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\henri\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Temp\\FPProjectStudentSuccess\\FinalProject-CSIS-4050\\FPProjectStudentSuccess\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'MaterialDesignColors 1.1.2' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "MaterialDesignColors",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'MaterialDesignThemes 2.5.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "MaterialDesignThemes",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }

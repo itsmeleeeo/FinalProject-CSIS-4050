@@ -91,9 +91,11 @@ using FPProjectStudentSuccess.Entities;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 44 "C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\Pages\ViewStock.razor"
+#line 57 "C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\Pages\ViewStock.razor"
        
     public List<Product> productList = new List<Product>();
+    public string Filter { get; set; }
+    public string Plataform { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
@@ -103,6 +105,16 @@ using FPProjectStudentSuccess.Entities;
     protected async Task LoadData()
     {
         productList = await PdtSrv.GetProductsAsync();
+    }
+
+    public bool IsVisible(Product product)
+    {
+        if (string.IsNullOrEmpty(Filter)) { return true; }
+        else if (product.Name.Contains(Filter, StringComparison.OrdinalIgnoreCase)){ return true; }
+        else if (product.Publisher.Contains(Filter, StringComparison.OrdinalIgnoreCase)) { return true; }
+        else if (Plataform.Contains(Filter, StringComparison.OrdinalIgnoreCase)) { return true; }
+        else if (product.Price.ToString().StartsWith(Filter)) { return true; }
+        else { return false; }
     }
 
 #line default

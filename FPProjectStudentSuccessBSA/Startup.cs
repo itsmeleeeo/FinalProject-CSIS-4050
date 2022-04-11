@@ -45,6 +45,7 @@ namespace FPProjectStudentSuccessBSA
             var SalesService = new SalesService(SQLConnectionConfig);
             services.AddSingleton(ProductService);
             services.AddSingleton(SalesService);
+            services.AddHttpContextAccessor();
             services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuthenticationStateProvider<IdentityUser>>();
         }
 

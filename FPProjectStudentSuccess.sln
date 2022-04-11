@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FPProjectStudentSuccess", "
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "FPProjectStudentSuccessDB", "FPProjectStudentSuccessDB\FPProjectStudentSuccessDB.sqlproj", "{F8D6A5E4-30AB-4DD4-9B4B-AA868BEE36A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FPProjectStudentSuccessBSA", "FPProjectStudentSuccessBSA\FPProjectStudentSuccessBSA.csproj", "{ABA0E629-E2B0-4C53-9EAD-3A2725E19415}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FPProjectStudentSuccessBSA", "FPProjectStudentSuccessBSA\FPProjectStudentSuccessBSA.csproj", "{ABA0E629-E2B0-4C53-9EAD-3A2725E19415}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

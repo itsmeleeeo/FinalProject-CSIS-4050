@@ -117,3 +117,10 @@ C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBS
 C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\obj\Debug\netcoreapp3.1\FPProjectStudentSuccessBSA.Views.pdb
 C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\obj\Debug\netcoreapp3.1\FPProjectStudentSuccessBSA.csproj.CopyComplete
 C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\obj\Debug\netcoreapp3.1\FPProjectStudentSuccessBSA.genruntimeconfig.cache
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\bin\Debug\netcoreapp3.1\Blazored.Toast.dll
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authorization.dll
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Components.dll
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Components.Forms.dll
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Components.Web.dll
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Metadata.dll
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\bin\Debug\netcoreapp3.1\Microsoft.JSInterop.dll

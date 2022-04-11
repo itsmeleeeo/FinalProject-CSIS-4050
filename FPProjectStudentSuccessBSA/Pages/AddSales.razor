@@ -1,9 +1,86 @@
 ﻿<AuthorizeView>
     @page "/addsales"
 
+    @using FPProjectStudentSuccess.Entities;
+    @using Microsoft.AspNetCore.Http;
+
+    @inject IHttpContextAccessor httpContextAccessor
+    @inject FPProjectStudentSuccessBSA.Service.SalesService SaleSrv
+
     <h3>Add Sales</h3>
+    <form class="row g-3">
+        <div class="col-md-6">
+            <label for="inputName" class="form-label"><b>Product Name</b></label>
+            <input type="text" class="form-control" id="inputName" @bind="name">
+        </div>
+        <div class="col-12">
+            <label for="inputPlataform" class="form-label"><b>Plataform</b></label>
+            <div>
+                <label>
+                    <input type="radio" value="PC" name="plataform" aria-label="PC" id="PC" @onclick="@(() => plataform = "PC")" /> PC
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="radio" value="XBOXX" name="plataform" aria-label="XBOXX" id="XBOXX"
+                           @onclick="@(() => plataform = "XBox Series X")" /> XBox Series X
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="radio" value="XBOX1" name="plataform" aria-label="XBOX1" id="XBOX1"
+                           @onclick="@(() => plataform = "XBox One")" /> XBox One
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="radio" value="PS5" name="plataform" aria-label="PS5" id="PS5" @onclick="@(() => plataform = "PS5")" /> PS5
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="radio" value="PS4" name="plataform" aria-label="PS4" id="PS4" @onclick="@(() => plataform = "PS4")" /> PS4
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="radio" value="Switch" name="plataform" aria-label="Switch" id="SWITCH"
+                           @onclick="@(() => plataform = "Nintendo Switch")" /> Nintendo Switch
+                </label>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <label for="inputQuantity" class="form-label"><b>Quantity</b></label>
+            <input type="number" class="form-control" id="inputQuantity" @bind="quantity">
+        </div>
+        <div class="col-md-6">
+            <label for="inputPrice" class="form-label"><b>Price</b></label>
+            <input type="number" class="form-control" id="inputPrice" min="0.00" max="10000.00" step="0.01" @bind="salestotal">
+        </div>
+        <div class="col-md-6">
+        </div>
+        <br />
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary" @onclick="SubmitData">Add Sale</button>
+        </div>
+    </form>
+    <br />
 </AuthorizeView>
 
 @code {
+    string name = "";
+    string plataform = "";
+    int quantity = 0;
+    decimal salestotal = 0;
+    string email = "";
 
+    protected override void OnInitialized()
+    {
+        email = httpContextAccessor.HttpContext.User.Identity.Name;
+    }
+
+    protected async Task SubmitData()
+    {
+        await SaleSrv.InsertSaleAsync(name, plataform, quantity, salestotal, email);
+    }
 }

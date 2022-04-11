@@ -75,6 +75,20 @@ using FPProjectStudentSuccessBSA.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\Pages\AddSales.razor"
+using FPProjectStudentSuccess.Entities;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\Pages\AddSales.razor"
+using Microsoft.AspNetCore.Http;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/addsales")]
     public partial class AddSales : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -83,6 +97,30 @@ using FPProjectStudentSuccessBSA.Shared;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 70 "C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\Pages\AddSales.razor"
+       
+    string name = "";
+    string plataform = "";
+    int quantity = 0;
+    decimal salestotal = 0;
+    string email = "";
+
+    protected override void OnInitialized()
+    {
+        email = httpContextAccessor.HttpContext.User.Identity.Name;
+    }
+
+    protected async Task SubmitData()
+    {
+        await SaleSrv.InsertSaleAsync(name, plataform, quantity, salestotal, email);
+    }
+
+#line default
+#line hidden
+#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private FPProjectStudentSuccessBSA.Service.SalesService SaleSrv { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IHttpContextAccessor httpContextAccessor { get; set; }
     }
 }
 #pragma warning restore 1591

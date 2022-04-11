@@ -91,7 +91,7 @@ using FPProjectStudentSuccess.Entities;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 62 "C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\Pages\AddStock.razor"
+#line 75 "C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\Pages\AddStock.razor"
        
     string name = "";
     string publisher = "";
@@ -99,46 +99,10 @@ using FPProjectStudentSuccess.Entities;
     int quantity = 0;
     int year = 2022;
     decimal price = 0;
-    int plataformId = 0;
-    int shelfId = 0;
 
     protected async Task SubmitData()
     {
-        switch (plataform)
-        {
-            case "PC":
-                plataformId = 3;
-                shelfId = 2;
-                break;
-
-            case "XBOX":
-                //plataformId = 4;
-                //shelfId = 3;
-                break;
-
-            case "PS5":
-                //plataformId = 5;
-                //shelfId = 4;
-                break;
-
-            case "Switch":
-                //plataformId = 6;
-                //shelfId = 5;
-                break;
-                //TODO: Check logic after IGDB.
-        }
-
-        Product pdt = new Product();
-        
-        pdt.Name = name;
-        pdt.Publisher = publisher;
-        pdt.PlataformId = plataformId;
-        pdt.Quantity = quantity;
-        pdt.Year = year;
-        pdt.Price = price;
-        pdt.ShelfId = shelfId;
-
-        await PdtSrv.InsertProductAsync(pdt);
+        await PdtSrv.InsertProductAsync(name, publisher, plataform, quantity, year, price);
     }
 
 #line default

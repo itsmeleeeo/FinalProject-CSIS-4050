@@ -91,9 +91,11 @@ using FPProjectStudentSuccess.Entities;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 39 "C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\Pages\ViewSales.razor"
+#line 51 "C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\Pages\ViewSales.razor"
        
     public List<Sales> salesList = new List<Sales>();
+    public string Filter { get; set; }
+    public string Salesperson { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
@@ -103,6 +105,15 @@ using FPProjectStudentSuccess.Entities;
     protected async Task LoadData()
     {
         salesList = await SaleSrv.GetSalesAsync();
+    }
+
+    public bool IsVisible(Sales sale)
+    {
+        if (string.IsNullOrEmpty(Filter)) { return true; }
+        else if (sale.ProductName.Contains(Filter, StringComparison.OrdinalIgnoreCase)) { return true; }
+        else if (Salesperson.Contains(Filter, StringComparison.OrdinalIgnoreCase)) { return true; }
+        else if (sale.Quantity.ToString().StartsWith(Filter) || sale.SalesTotal.ToString().StartsWith(Filter)) { return true; }
+        else { return false; }
     }
 
 #line default

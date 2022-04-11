@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\App.xaml
-6-588778819
+12340904085
 
-171235891944
+23-1929252845
 2261764341730
-AdminOverview.xaml;EmployeeView.xaml;MainWindow.xaml;ProductView.xaml;SalesmenView.xaml;StockMenuView.xaml;
+AdminOverview.xaml;EmployeeAddView.xaml;EmployeeDeleteView.xaml;EmployeeEditView.xaml;EmployeeView.xaml;MainWindow.xaml;ProductView.xaml;SalesmenView.xaml;StockAddView.xaml;StockDeleteView.xaml;StockEditView.xaml;StockMenuView.xaml;
 
-True
+False
 

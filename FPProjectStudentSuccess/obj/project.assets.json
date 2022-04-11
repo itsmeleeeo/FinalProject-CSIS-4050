@@ -6035,23 +6035,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\henri\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\leeeo\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Temp\\FPProjectStudentSuccess\\FinalProject-CSIS-4050\\FPProjectStudentSuccess\\FPProjectStudentSuccess.csproj",
+      "projectUniqueName": "C:\\Users\\leeeo\\Documents\\Douglas College - 7th Semester\\CSIS 4050 - Advanced OO Prog for Bus App\\FPProjectStudentSuccess\\FinalProject-CSIS-4050\\FPProjectStudentSuccess\\FPProjectStudentSuccess.csproj",
       "projectName": "FPProjectStudentSuccess",
-      "projectPath": "C:\\Temp\\FPProjectStudentSuccess\\FinalProject-CSIS-4050\\FPProjectStudentSuccess\\FPProjectStudentSuccess.csproj",
-      "packagesPath": "C:\\Users\\henri\\.nuget\\packages\\",
-      "outputPath": "C:\\Temp\\FPProjectStudentSuccess\\FinalProject-CSIS-4050\\FPProjectStudentSuccess\\obj\\",
+      "projectPath": "C:\\Users\\leeeo\\Documents\\Douglas College - 7th Semester\\CSIS 4050 - Advanced OO Prog for Bus App\\FPProjectStudentSuccess\\FinalProject-CSIS-4050\\FPProjectStudentSuccess\\FPProjectStudentSuccess.csproj",
+      "packagesPath": "C:\\Users\\leeeo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\leeeo\\Documents\\Douglas College - 7th Semester\\CSIS 4050 - Advanced OO Prog for Bus App\\FPProjectStudentSuccess\\FinalProject-CSIS-4050\\FPProjectStudentSuccess\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\henri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\leeeo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6118,7 +6119,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   },

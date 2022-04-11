@@ -202,3 +202,18 @@ C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\o
 C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\obj\Debug\netcoreapp3.1\ProductView.baml
 C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\obj\Debug\netcoreapp3.1\SalesmenView.baml
 C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\obj\Debug\netcoreapp3.1\StockMenuView.baml
+C:\Users\leeeo\Documents\Douglas College - 7th Semester\CSIS 4050 - Advanced OO Prog for Bus App\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\leeeo\Documents\Douglas College - 7th Semester\CSIS 4050 - Advanced OO Prog for Bus App\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\leeeo\Documents\Douglas College - 7th Semester\CSIS 4050 - Advanced OO Prog for Bus App\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\leeeo\Documents\Douglas College - 7th Semester\CSIS 4050 - Advanced OO Prog for Bus App\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\obj\Debug\netcoreapp3.1\EmployeeAddView.g.cs
+C:\Users\leeeo\Documents\Douglas College - 7th Semester\CSIS 4050 - Advanced OO Prog for Bus App\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\obj\Debug\netcoreapp3.1\EmployeeDeleteView.g.cs
+C:\Users\leeeo\Documents\Douglas College - 7th Semester\CSIS 4050 - Advanced OO Prog for Bus App\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\obj\Debug\netcoreapp3.1\EmployeeEditView.g.cs
+C:\Users\leeeo\Documents\Douglas College - 7th Semester\CSIS 4050 - Advanced OO Prog for Bus App\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\obj\Debug\netcoreapp3.1\StockAddView.g.cs
+C:\Users\leeeo\Documents\Douglas College - 7th Semester\CSIS 4050 - Advanced OO Prog for Bus App\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\obj\Debug\netcoreapp3.1\StockDeleteView.g.cs
+C:\Users\leeeo\Documents\Douglas College - 7th Semester\CSIS 4050 - Advanced OO Prog for Bus App\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\obj\Debug\netcoreapp3.1\StockEditView.g.cs
+C:\Users\leeeo\Documents\Douglas College - 7th Semester\CSIS 4050 - Advanced OO Prog for Bus App\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\obj\Debug\netcoreapp3.1\EmployeeAddView.baml
+C:\Users\leeeo\Documents\Douglas College - 7th Semester\CSIS 4050 - Advanced OO Prog for Bus App\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\obj\Debug\netcoreapp3.1\EmployeeDeleteView.baml
+C:\Users\leeeo\Documents\Douglas College - 7th Semester\CSIS 4050 - Advanced OO Prog for Bus App\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\obj\Debug\netcoreapp3.1\EmployeeEditView.baml
+C:\Users\leeeo\Documents\Douglas College - 7th Semester\CSIS 4050 - Advanced OO Prog for Bus App\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\obj\Debug\netcoreapp3.1\StockAddView.baml
+C:\Users\leeeo\Documents\Douglas College - 7th Semester\CSIS 4050 - Advanced OO Prog for Bus App\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\obj\Debug\netcoreapp3.1\StockDeleteView.baml
+C:\Users\leeeo\Documents\Douglas College - 7th Semester\CSIS 4050 - Advanced OO Prog for Bus App\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\obj\Debug\netcoreapp3.1\StockEditView.baml

@@ -19,7 +19,7 @@
                 <TextBox x:Name="txtAdminLogin" HorizontalAlignment="Left" Height="34" Margin="10,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="283"/>
             </Border>
             <Border BorderBrush="White" BorderThickness="0 0 1 0" Grid.Column="0" Grid.ColumnSpan="3">
-                <TextBox x:Name="txtAdminPass" HorizontalAlignment="Left" Height="34" Margin="10,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="283"/>
+                <PasswordBox x:Name="txtAdminPass" HorizontalAlignment="Left" Height="34" Margin="10,210,0,0" PasswordChar="*" VerticalAlignment="Top" Width="283" />
             </Border>
             <Border BorderBrush="White" BorderThickness="0 0 1 0" Grid.Column="0" Grid.ColumnSpan="3">
                 <Label x:Name="lblLogo" Content="Game Depot" HorizontalAlignment="Center" Margin="90,10,0,0" VerticalAlignment="Top" FontFamily="Corbel" FontSize="36" Foreground="White"/>

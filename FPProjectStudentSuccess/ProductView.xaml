@@ -51,10 +51,6 @@
                         <Label Content="Search by product" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#f2f2f2" FontSize="18" FontFamily="Corbel"/>
                         <TextBox x:Name="txtSearchName"  TextWrapping="Wrap" VerticalAlignment="Top" Width="auto" Margin="10,32,83,0"/>
                     </Grid>
-                    <Grid Grid.Column="3">
-                        <Label Content="Search by Price" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#f2f2f2" FontSize="18" FontFamily="Corbel"/>
-                        <TextBox x:Name="txtSearchPrice" TextWrapping="Wrap" VerticalAlignment="Top" Width="auto" Margin="0,32,93,0"/>
-                    </Grid>
                 </Grid>
             </Grid>
             <Grid x:Name="toolbar" Width="70" Background="#f2f2f2" RenderTransformOrigin="0.5,0.5" Grid.Column="0">

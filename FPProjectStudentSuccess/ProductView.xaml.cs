@@ -36,8 +36,7 @@ namespace FPProjectStudentSuccess
             stockMenu.Click += OpenStockPage;
             employeeMenu.Click += OpenEmployeePage;
             logout.Click += Logout;
-            txtSearchName.TextChanged += SearchByProduct;
-            txtSearchPrice.TextChanged += SearchByPrice;
+            txtSearchName.TextChanged += SearchProduct;
             lstboxConsoles.SelectionChanged += SelectedItem;
 
             //Menu Item visibility
@@ -74,48 +73,35 @@ namespace FPProjectStudentSuccess
 
         private void UpdateDataGrid()
         {
-            using (var ctx = new FPProjectStudentSuccessDBContext())
-            {
-                productFiltered = ctx.Product.ToList<Product>();
-                DataGridProducts.ItemsSource = productFiltered;
-            }
+            DataGridProducts.ItemsSource = productFiltered;
         }
 
-        private void SearchByProduct(object o, TextChangedEventArgs e)
+        private void SearchProduct(object o, TextChangedEventArgs ea)
         {
             string txtProduct = txtSearchName.Text.ToString().ToLower();
-            using (var ctx = new FPProjectStudentSuccessDBContext())
-            {
-                var product = productsList.Where(x => x.Name == txtProduct);
-                productFiltered = product.ToList<Product>();
-            }
 
-            UpdateDataGrid();
-        }
+            var stockSearch = from p in productsList
+                              where p.Name.Contains(txtProduct)
+                              select p;
+            productFiltered = stockSearch.ToList();
 
-        private void SearchByPrice(object o, TextChangedEventArgs e)
-        {
-            decimal txtPrice = Convert.ToDecimal(txtSearchPrice.Text);
-            using (var ctx = new FPProjectStudentSuccessDBContext())
-            {
-                var price = productsList.Where(x => x.Price == txtPrice);
-                productFiltered = price.ToList<Product>();
-            }
             UpdateDataGrid();
         }
 
         private void SelectedItem(object o, SelectionChangedEventArgs e)
         {
-            var selectedPlatform = lstboxConsoles.SelectedItems.OfType<string>();
 
+            var selectedPlatform = lstboxConsoles.SelectedItem.ToString();
             using (var ctx = new FPProjectStudentSuccessDBContext())
             {
+                var platName = ctx.Plataform.Where(x => x.Name == selectedPlatform).First();
+
                 var plataformSelected = from p in productsList
-                                        where p.Plataform == selectedPlatform
+                                        where p.PlataformId == platName.Id
                                         select p;
                 productFiltered = plataformSelected.ToList();
+                UpdateDataGrid();
             }
-            UpdateDataGrid();
         }
 
         private void OpenAndCloseMenu(object o, RoutedEventArgs rea)

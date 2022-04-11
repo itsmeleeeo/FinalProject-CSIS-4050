@@ -43,14 +43,6 @@
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <Grid Grid.Column="1">
-                        <Label Content="Search by Product Name" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#f2f2f2" FontSize="18" FontFamily="Corbel"/>
-                        <TextBox x:Name="txtSearchName"  TextWrapping="Wrap" VerticalAlignment="Top" Width="auto" Margin="10,32,83,0"/>
-                    </Grid>
-                    <Grid Grid.Column="2">
-                        <Label Content="Search by User Name" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#f2f2f2" FontSize="18" FontFamily="Corbel"/>
-                        <TextBox x:Name="txtSearchUser"  TextWrapping="Wrap" VerticalAlignment="Top" Width="auto" Margin="10,32,83,0"/>
-                    </Grid>
                 </Grid>
             </Grid>
             <Grid x:Name="toolbar" Width="70" Background="#f2f2f2" RenderTransformOrigin="0.5,0.5" Grid.Column="0">

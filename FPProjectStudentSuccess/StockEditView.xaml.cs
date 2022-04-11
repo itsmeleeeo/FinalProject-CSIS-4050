@@ -99,8 +99,8 @@ namespace FPProjectStudentSuccess
             txtYear.Text = "";
             txtPrice.Text = "";
 
-            AdminOverview wAdminOverView = new AdminOverview();
-            wAdminOverView.Show();
+            StockMenuView wStockView = new StockMenuView();
+            wStockView.Show();
 
             foreach (Window window in Application.Current.Windows)
             {

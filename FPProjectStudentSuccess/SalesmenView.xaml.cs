@@ -35,8 +35,6 @@ namespace FPProjectStudentSuccess
             stockMenu.Click += OpenStockPage;
             employeeMenu.Click += OpenEmployeePage;
             logout.Click += Logout;
-            txtSearchName.TextChanged += SearchByName;
-            txtSearchUser.TextChanged += SearchByUsername;
 
             //Menu Item visibility
             productsMenu.Visibility = Visibility.Hidden;
@@ -62,27 +60,6 @@ namespace FPProjectStudentSuccess
             {
                 salesFiltered = ctx.Sales.ToList<Sales>();
                 DataGridSales.ItemsSource = salesFiltered;
-            }
-        }
-
-        private void SearchByName(object o, TextChangedEventArgs ea)
-        {
-            string txtProduct = txtSearchName.Text.ToString().ToLower();
-            using (var ctx = new FPProjectStudentSuccessDBContext())
-            {
-                var product = salesList.Where(x => x.ProductName == txtProduct);
-                salesFiltered = product.ToList<Sales>();
-            }
-            UpdateDataGrid();
-        }
-
-        private void SearchByUsername(object o, TextChangedEventArgs ea)
-        {
-            int username = Convert.ToInt32(txtSearchUser.Text.ToString().ToLower());
-            using (var ctx = new FPProjectStudentSuccessDBContext())
-            {
-                var user = salesList.Where(x => x.UserId == username);
-                salesFiltered = user.ToList<Sales>();
             }
         }
 

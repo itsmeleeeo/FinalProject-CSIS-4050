@@ -153,8 +153,8 @@ namespace FPProjectStudentSuccess
 
             MessageBox.Show("Product Added");
 
-            AdminOverview wAdminOverView = new AdminOverview();
-            wAdminOverView.Show();
+            StockMenuView wStockView = new StockMenuView();
+            wStockView.Show();
 
             foreach (Window window in Application.Current.Windows)
             {

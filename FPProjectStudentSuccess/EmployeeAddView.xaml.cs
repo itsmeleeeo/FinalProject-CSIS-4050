@@ -130,6 +130,17 @@ namespace FPProjectStudentSuccess
             txtPassword.Text = "";
             txtUsername.Text = "";
             cmbBoxPosition.Text = "";
+
+            EmployeeView wAEmployeeView = new EmployeeView();
+            wAEmployeeView.Show();
+
+            foreach (Window window in Application.Current.Windows)
+            {
+                if (window.GetType() == typeof(EmployeeAddView))
+                {
+                    window.Close();
+                }
+            }
         }
 
         private void CleanUser(object o, EventArgs ea)

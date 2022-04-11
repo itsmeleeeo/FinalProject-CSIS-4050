@@ -125,8 +125,8 @@ namespace FPProjectStudentSuccess
             txtUserId.Text = "";
             txtUsername.Text = "";
 
-            AdminOverview wAdminOverView = new AdminOverview();
-            wAdminOverView.Show();
+            EmployeeView wAEmployeeView = new EmployeeView();
+            wAEmployeeView.Show();
 
             foreach(Window window in Application.Current.Windows)
             {
@@ -136,7 +136,7 @@ namespace FPProjectStudentSuccess
                 }
             }
         }
-
+        //Initializing combo box for user position
         private void InitializeComboBox()
         {
             cmbBoxPosition.Items.Add("Manager");

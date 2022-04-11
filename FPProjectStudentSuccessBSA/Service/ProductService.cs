@@ -28,14 +28,37 @@ namespace FPProjectStudentSuccessBSA.Service
                 return await Task.FromResult(result.ToList());
             }
         }
-        public async Task<Product> InsertProductAsync(Product product)
+        public async Task<Product> InsertProductAsync(string name, string publisher, string plataform, int quantity, int year, decimal price)
         {
+            Product newProduct = new Product();
+
+            //Get FKs to add Stock (Product table)
             using (var ctx = new FPProjectStudentSuccessDBContext())
             {
-                ctx.Product.Add(product);
+                var getPlataform = ctx.Plataform.Where(x => x.Name == plataform).First();
+                var getShelf = ctx.Shelf.Where(x => x.PlataformId == getPlataform.Id).First();
+                var checkProduct = ctx.Product.Where(x => x.Name == name && x.PlataformId == getPlataform.Id).FirstOrDefault();
+
+                newProduct.Name = name;
+                newProduct.Publisher = publisher;
+                newProduct.PlataformId = getPlataform.Id;
+                newProduct.Quantity = quantity;
+                newProduct.Year = year;
+                newProduct.Price = price;
+                newProduct.ShelfId = getShelf.Id;
+
+                if (checkProduct == null)
+                {
+                    ctx.Product.Add(newProduct);
+                } else
+                {
+                    int newQuantity = checkProduct.Quantity + quantity;
+                    checkProduct.Quantity = newQuantity;
+                    ctx.Product.Update(checkProduct);
+                }
                 await ctx.SaveChangesAsync();
             }
-            return product;
+            return newProduct;
         }        
     }
 }

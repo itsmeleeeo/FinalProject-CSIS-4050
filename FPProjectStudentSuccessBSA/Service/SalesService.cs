@@ -7,6 +7,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace FPProjectStudentSuccessBSA.Service
 {
@@ -27,15 +28,32 @@ namespace FPProjectStudentSuccessBSA.Service
                 return await Task.FromResult(result.ToList());
             }
         }
-        public async Task<Sales> InsertSaleAsync(Sales sale)
+        public async Task<Sales> InsertSaleAsync(string name, string plataform, int quantity, decimal salestotal, string email)
         {
+            Sales sale = new Sales();
+
+            //Get FKs to add to Sales (table)
             using (var ctx = new FPProjectStudentSuccessDBContext())
-            {
+            {               
+                var getPlataform = ctx.Plataform.Where(x => x.Name == plataform).First();
+                var getProduct = ctx.Product.Where(x => x.Name == name && x.PlataformId == getPlataform.Id).First();
+                var getUser = ctx.Users.Where(x => x.Email == email).First();
+
+                int newQuantity = getProduct.Quantity - quantity;
+                getProduct.Quantity = newQuantity;
+                ctx.Product.Update(getProduct);
+
+                sale.ProductId = getProduct.Id;
+                sale.ProductName = name;
+                sale.Quantity = quantity;
+                sale.SalesTotal = salestotal;
+                sale.UserId = getUser.Id;
+
                 ctx.Sales.Add(sale);
+
                 await ctx.SaveChangesAsync();
             }
             return sale;
-            //TODO: update Product Amount after Sale (baixa de estoque)
         }
     }
 }

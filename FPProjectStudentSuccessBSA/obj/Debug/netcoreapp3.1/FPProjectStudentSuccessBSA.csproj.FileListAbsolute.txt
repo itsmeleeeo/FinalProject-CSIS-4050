@@ -117,6 +117,17 @@ C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBS
 C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\obj\Debug\netcoreapp3.1\FPProjectStudentSuccessBSA.Views.pdb
 C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\obj\Debug\netcoreapp3.1\FPProjectStudentSuccessBSA.csproj.CopyComplete
 C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\obj\Debug\netcoreapp3.1\FPProjectStudentSuccessBSA.genruntimeconfig.cache
+<<<<<<< HEAD
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\bin\Debug\netcoreapp3.1\Blazored.Toast.dll
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authorization.dll
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Components.dll
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Components.Forms.dll
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Components.Web.dll
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Metadata.dll
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\bin\Debug\netcoreapp3.1\Microsoft.JSInterop.dll
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\bin\Debug\netcoreapp3.1\IGDB.dll
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\bin\Debug\netcoreapp3.1\RestEase.dll
+=======
 C:\Users\leeeo\Documents\Douglas College - 7th Semester\CSIS 4050 - Advanced OO Prog for Bus App\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\obj\Debug\netcoreapp3.1\FPProjectStudentSuccessBSA.csproj.AssemblyReference.cache
 C:\Users\leeeo\Documents\Douglas College - 7th Semester\CSIS 4050 - Advanced OO Prog for Bus App\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\obj\Debug\netcoreapp3.1\FPProjectStudentSuccessBSA.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\leeeo\Documents\Douglas College - 7th Semester\CSIS 4050 - Advanced OO Prog for Bus App\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\obj\Debug\netcoreapp3.1\FPProjectStudentSuccessBSA.AssemblyInfoInputs.cache
@@ -235,3 +246,4 @@ C:\Users\leeeo\Documents\Douglas College - 7th Semester\CSIS 4050 - Advanced OO 
 C:\Users\leeeo\Documents\Douglas College - 7th Semester\CSIS 4050 - Advanced OO Prog for Bus App\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\obj\Debug\netcoreapp3.1\FPProjectStudentSuccessBSA.Views.pdb
 C:\Users\leeeo\Documents\Douglas College - 7th Semester\CSIS 4050 - Advanced OO Prog for Bus App\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\obj\Debug\netcoreapp3.1\FPProjectStudentSuccessBSA.csproj.CopyComplete
 C:\Users\leeeo\Documents\Douglas College - 7th Semester\CSIS 4050 - Advanced OO Prog for Bus App\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\obj\Debug\netcoreapp3.1\FPProjectStudentSuccessBSA.genruntimeconfig.cache
+>>>>>>> 95b7c12573886e7550d9cbf50d9eb7e17787f1d1

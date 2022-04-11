@@ -13,70 +13,70 @@ namespace FPProjectStudentSuccessBSA.Pages
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\leeeo\Documents\Douglas College - 7th Semester\CSIS 4050 - Advanced OO Prog for Bus App\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\_Imports.razor"
+#line 1 "C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\leeeo\Documents\Douglas College - 7th Semester\CSIS 4050 - Advanced OO Prog for Bus App\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\_Imports.razor"
+#line 2 "C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\_Imports.razor"
 using Microsoft.AspNetCore.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\leeeo\Documents\Douglas College - 7th Semester\CSIS 4050 - Advanced OO Prog for Bus App\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\_Imports.razor"
+#line 3 "C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\_Imports.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\leeeo\Documents\Douglas College - 7th Semester\CSIS 4050 - Advanced OO Prog for Bus App\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\_Imports.razor"
+#line 4 "C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\leeeo\Documents\Douglas College - 7th Semester\CSIS 4050 - Advanced OO Prog for Bus App\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\_Imports.razor"
+#line 5 "C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "C:\Users\leeeo\Documents\Douglas College - 7th Semester\CSIS 4050 - Advanced OO Prog for Bus App\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\_Imports.razor"
+#line 6 "C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "C:\Users\leeeo\Documents\Douglas College - 7th Semester\CSIS 4050 - Advanced OO Prog for Bus App\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\_Imports.razor"
+#line 7 "C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "C:\Users\leeeo\Documents\Douglas College - 7th Semester\CSIS 4050 - Advanced OO Prog for Bus App\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\_Imports.razor"
+#line 8 "C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\_Imports.razor"
 using FPProjectStudentSuccessBSA;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "C:\Users\leeeo\Documents\Douglas College - 7th Semester\CSIS 4050 - Advanced OO Prog for Bus App\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\_Imports.razor"
+#line 9 "C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\_Imports.razor"
 using FPProjectStudentSuccessBSA.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\leeeo\Documents\Douglas College - 7th Semester\CSIS 4050 - Advanced OO Prog for Bus App\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\Pages\AddStock.razor"
+#line 3 "C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\Pages\AddStock.razor"
 using FPProjectStudentSuccess.Entities;
 
 #line default
@@ -91,60 +91,46 @@ using FPProjectStudentSuccess.Entities;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 62 "C:\Users\leeeo\Documents\Douglas College - 7th Semester\CSIS 4050 - Advanced OO Prog for Bus App\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\Pages\AddStock.razor"
+#line 114 "C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\Pages\AddStock.razor"
        
     string name = "";
     string publisher = "";
-    string plataform = "";
     int quantity = 0;
     int year = 2022;
     decimal price = 0;
-    int plataformId = 0;
-    int shelfId = 0;
+
+    public List<Product> IGBDList = new List<Product>();
+
+    public string Filter { get; set; }
+    public string Plataform { get; set; }
+
+    protected void Edit(Product pdt)
+    {
+        name = pdt.Name;
+        publisher = pdt.Publisher;
+        using (var ctx = new FPProjectStudentSuccessDBContext())
+        {
+            var getPlataform = ctx.Plataform.Where(x => x.Id == pdt.PlataformId).First();
+            Plataform = getPlataform.Name;
+        }
+        year = pdt.Year;
+    }
+
+    protected async Task LoadData()
+    {
+        IGBDList = await IGDBSrv.GetIGDB(Filter);
+    }
 
     protected async Task SubmitData()
     {
-        switch (plataform)
-        {
-            case "PC":
-                plataformId = 3;
-                shelfId = 2;
-                break;
-
-            case "XBOX":
-                //plataformId = 4;
-                //shelfId = 3;
-                break;
-
-            case "PS5":
-                //plataformId = 5;
-                //shelfId = 4;
-                break;
-
-            case "Switch":
-                //plataformId = 6;
-                //shelfId = 5;
-                break;
-                //TODO: Check logic after IGDB.
-        }
-
-        Product pdt = new Product();
-        
-        pdt.Name = name;
-        pdt.Publisher = publisher;
-        pdt.PlataformId = plataformId;
-        pdt.Quantity = quantity;
-        pdt.Year = year;
-        pdt.Price = price;
-        pdt.ShelfId = shelfId;
-
-        await PdtSrv.InsertProductAsync(pdt);
+        await PdtSrv.InsertProductAsync(name, publisher, Plataform, quantity, year, price);
     }
 
 #line default
 #line hidden
 #nullable disable
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private FPProjectStudentSuccessBSA.Service.ProductService PdtSrv { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private FPProjectStudentSuccessBSA.Service.IGDBService IGDBSrv { get; set; }
     }
 }
 #pragma warning restore 1591

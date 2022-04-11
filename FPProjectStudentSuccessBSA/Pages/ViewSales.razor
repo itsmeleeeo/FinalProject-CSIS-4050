@@ -5,6 +5,11 @@
     @inject FPProjectStudentSuccessBSA.Service.SalesService SaleSrv
 
     <h3>View Sales</h3>
+    <div class="form-group">
+        <input class="form-control" type="text" placeholder="Filter Sales by Product Name, Quantity, Total or Salesperson"
+               @bind="Filter"
+               @bind:event="oninput">
+    </div>
     <table class="table">
         <thead class="thead">
             <tr>
@@ -16,28 +21,37 @@
         </thead>
         <tbody>
             @if (salesList != null)
+            {
+                @foreach (var sale in salesList)
                 {
-            @foreach (var sale in salesList)
+                    using (var ctx = new FPProjectStudentSuccessDBContext())
                     {
-            <tr>
-                <td>@sale.ProductName</td>
-                <td>@sale.Quantity</td>
-                <td>@sale.SalesTotal</td>
-                <td>@context.User.Identity.Name</td>
-                <td></td>
-            </tr>
+                        var getName = ctx.Users.Where(x => x.Id == sale.UserId).First();
+                        Salesperson = getName.Email;
                     }
+
+                    if (!IsVisible(sale))
+                        continue;
+                    <tr>
+                        <td>@sale.ProductName</td>
+                        <td>@sale.Quantity</td>
+                        <td>@sale.SalesTotal</td>
+                        <td>@Salesperson</td>
+                    </tr>
                 }
-                else
-                {
-            <p><em>Loading...</em></p>
-                }
+            }
+            else
+            {
+                <p><em>Loading...</em></p>
+            }
         </tbody>
     </table>
 </AuthorizeView>
 
 @code {
     public List<Sales> salesList = new List<Sales>();
+    public string Filter { get; set; }
+    public string Salesperson { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
@@ -47,5 +61,14 @@
     protected async Task LoadData()
     {
         salesList = await SaleSrv.GetSalesAsync();
+    }
+
+    public bool IsVisible(Sales sale)
+    {
+        if (string.IsNullOrEmpty(Filter)) { return true; }
+        else if (sale.ProductName.Contains(Filter, StringComparison.OrdinalIgnoreCase)) { return true; }
+        else if (Salesperson.Contains(Filter, StringComparison.OrdinalIgnoreCase)) { return true; }
+        else if (sale.Quantity.ToString().StartsWith(Filter) || sale.SalesTotal.ToString().StartsWith(Filter)) { return true; }
+        else { return false; }
     }
 }

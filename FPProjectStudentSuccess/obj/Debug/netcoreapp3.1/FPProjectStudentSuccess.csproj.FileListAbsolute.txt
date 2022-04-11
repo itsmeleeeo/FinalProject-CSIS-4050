@@ -202,6 +202,12 @@ C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\o
 C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\obj\Debug\netcoreapp3.1\ProductView.baml
 C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\obj\Debug\netcoreapp3.1\SalesmenView.baml
 C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\obj\Debug\netcoreapp3.1\StockMenuView.baml
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.dll
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.dll
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.WebUtilities.dll
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\bin\Debug\netcoreapp3.1\Microsoft.Extensions.ObjectPool.dll
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\bin\Debug\netcoreapp3.1\Microsoft.Net.Http.Headers.dll
 C:\Users\leeeo\Documents\Douglas College - 7th Semester\CSIS 4050 - Advanced OO Prog for Bus App\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
 C:\Users\leeeo\Documents\Douglas College - 7th Semester\CSIS 4050 - Advanced OO Prog for Bus App\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\leeeo\Documents\Douglas College - 7th Semester\CSIS 4050 - Advanced OO Prog for Bus App\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
@@ -217,3 +223,16 @@ C:\Users\leeeo\Documents\Douglas College - 7th Semester\CSIS 4050 - Advanced OO 
 C:\Users\leeeo\Documents\Douglas College - 7th Semester\CSIS 4050 - Advanced OO Prog for Bus App\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\obj\Debug\netcoreapp3.1\StockAddView.baml
 C:\Users\leeeo\Documents\Douglas College - 7th Semester\CSIS 4050 - Advanced OO Prog for Bus App\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\obj\Debug\netcoreapp3.1\StockDeleteView.baml
 C:\Users\leeeo\Documents\Douglas College - 7th Semester\CSIS 4050 - Advanced OO Prog for Bus App\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\obj\Debug\netcoreapp3.1\StockEditView.baml
+>>>>>>> 95b7c12573886e7550d9cbf50d9eb7e17787f1d1
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\obj\Debug\netcoreapp3.1\EmployeeAddView.g.cs
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\obj\Debug\netcoreapp3.1\EmployeeDeleteView.g.cs
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\obj\Debug\netcoreapp3.1\EmployeeEditView.g.cs
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\obj\Debug\netcoreapp3.1\StockAddView.g.cs
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\obj\Debug\netcoreapp3.1\StockDeleteView.g.cs
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\obj\Debug\netcoreapp3.1\StockEditView.g.cs
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\obj\Debug\netcoreapp3.1\EmployeeAddView.baml
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\obj\Debug\netcoreapp3.1\EmployeeDeleteView.baml
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\obj\Debug\netcoreapp3.1\EmployeeEditView.baml
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\obj\Debug\netcoreapp3.1\StockAddView.baml
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\obj\Debug\netcoreapp3.1\StockDeleteView.baml
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccess\obj\Debug\netcoreapp3.1\StockEditView.baml

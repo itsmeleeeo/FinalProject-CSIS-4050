@@ -1,3 +1,4 @@
 ﻿<StaticWebAssets Version="1.0">
-  <ContentRoot BasePath="/Identity" Path="C:\Users\leeeo\.nuget\packages\microsoft.aspnetcore.identity.ui\3.1.22\staticwebassets\V4\" />
+  <ContentRoot BasePath="/Identity" Path="C:\Users\henri\.nuget\packages\microsoft.aspnetcore.identity.ui\3.1.22\staticwebassets\V4\" />
+  <ContentRoot BasePath="_content/Blazored.Toast" Path="C:\Users\henri\.nuget\packages\blazored.toast\3.2.2\build\..\staticwebassets\" />
 </StaticWebAssets>

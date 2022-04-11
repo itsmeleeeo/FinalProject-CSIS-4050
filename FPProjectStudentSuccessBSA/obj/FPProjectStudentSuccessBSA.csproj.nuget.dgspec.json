@@ -1,24 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\leeeo\\Documents\\Douglas College - 7th Semester\\CSIS 4050 - Advanced OO Prog for Bus App\\FPProjectStudentSuccess\\FinalProject-CSIS-4050\\FPProjectStudentSuccessBSA\\FPProjectStudentSuccessBSA.csproj": {}
+    "C:\\Temp\\FPProjectStudentSuccess\\FinalProject-CSIS-4050\\FPProjectStudentSuccessBSA\\FPProjectStudentSuccessBSA.csproj": {}
   },
   "projects": {
-    "C:\\Users\\leeeo\\Documents\\Douglas College - 7th Semester\\CSIS 4050 - Advanced OO Prog for Bus App\\FPProjectStudentSuccess\\FinalProject-CSIS-4050\\FPProjectStudentSuccessBSA\\FPProjectStudentSuccessBSA.csproj": {
+    "C:\\Temp\\FPProjectStudentSuccess\\FinalProject-CSIS-4050\\FPProjectStudentSuccessBSA\\FPProjectStudentSuccessBSA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\leeeo\\Documents\\Douglas College - 7th Semester\\CSIS 4050 - Advanced OO Prog for Bus App\\FPProjectStudentSuccess\\FinalProject-CSIS-4050\\FPProjectStudentSuccessBSA\\FPProjectStudentSuccessBSA.csproj",
+        "projectUniqueName": "C:\\Temp\\FPProjectStudentSuccess\\FinalProject-CSIS-4050\\FPProjectStudentSuccessBSA\\FPProjectStudentSuccessBSA.csproj",
         "projectName": "FPProjectStudentSuccessBSA",
-        "projectPath": "C:\\Users\\leeeo\\Documents\\Douglas College - 7th Semester\\CSIS 4050 - Advanced OO Prog for Bus App\\FPProjectStudentSuccess\\FinalProject-CSIS-4050\\FPProjectStudentSuccessBSA\\FPProjectStudentSuccessBSA.csproj",
-        "packagesPath": "C:\\Users\\leeeo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\leeeo\\Documents\\Douglas College - 7th Semester\\CSIS 4050 - Advanced OO Prog for Bus App\\FPProjectStudentSuccess\\FinalProject-CSIS-4050\\FPProjectStudentSuccessBSA\\obj\\",
+        "projectPath": "C:\\Temp\\FPProjectStudentSuccess\\FinalProject-CSIS-4050\\FPProjectStudentSuccessBSA\\FPProjectStudentSuccessBSA.csproj",
+        "packagesPath": "C:\\Users\\henri\\.nuget\\packages\\",
+        "outputPath": "C:\\Temp\\FPProjectStudentSuccess\\FinalProject-CSIS-4050\\FPProjectStudentSuccessBSA\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\leeeo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\henri\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -32,8 +31,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\leeeo\\Documents\\Douglas College - 7th Semester\\CSIS 4050 - Advanced OO Prog for Bus App\\FPProjectStudentSuccess\\FinalProject-CSIS-4050\\FPProjectStudentSuccess\\FPProjectStudentSuccess.csproj": {
-                "projectPath": "C:\\Users\\leeeo\\Documents\\Douglas College - 7th Semester\\CSIS 4050 - Advanced OO Prog for Bus App\\FPProjectStudentSuccess\\FinalProject-CSIS-4050\\FPProjectStudentSuccess\\FPProjectStudentSuccess.csproj"
+              "C:\\Temp\\FPProjectStudentSuccess\\FinalProject-CSIS-4050\\FPProjectStudentSuccess\\FPProjectStudentSuccess.csproj": {
+                "projectPath": "C:\\Temp\\FPProjectStudentSuccess\\FinalProject-CSIS-4050\\FPProjectStudentSuccess\\FPProjectStudentSuccess.csproj"
               }
             }
           }
@@ -48,9 +47,21 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Blazored.Toast": {
+              "target": "Package",
+              "version": "[3.2.2, )"
+            },
+            "IGDB": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.22, )"
+            },
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.2.2, )"
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
@@ -67,6 +78,10 @@
             "Microsoft.EntityFrameworkCore.Tools": {
               "target": "Package",
               "version": "[3.1.22, )"
+            },
+            "RestEase": {
+              "target": "Package",
+              "version": "[1.5.5, )"
             },
             "System.Data.SqlClient": {
               "target": "Package",
@@ -91,25 +106,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\leeeo\\Documents\\Douglas College - 7th Semester\\CSIS 4050 - Advanced OO Prog for Bus App\\FPProjectStudentSuccess\\FinalProject-CSIS-4050\\FPProjectStudentSuccess\\FPProjectStudentSuccess.csproj": {
+    "C:\\Temp\\FPProjectStudentSuccess\\FinalProject-CSIS-4050\\FPProjectStudentSuccess\\FPProjectStudentSuccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\leeeo\\Documents\\Douglas College - 7th Semester\\CSIS 4050 - Advanced OO Prog for Bus App\\FPProjectStudentSuccess\\FinalProject-CSIS-4050\\FPProjectStudentSuccess\\FPProjectStudentSuccess.csproj",
+        "projectUniqueName": "C:\\Temp\\FPProjectStudentSuccess\\FinalProject-CSIS-4050\\FPProjectStudentSuccess\\FPProjectStudentSuccess.csproj",
         "projectName": "FPProjectStudentSuccess",
-        "projectPath": "C:\\Users\\leeeo\\Documents\\Douglas College - 7th Semester\\CSIS 4050 - Advanced OO Prog for Bus App\\FPProjectStudentSuccess\\FinalProject-CSIS-4050\\FPProjectStudentSuccess\\FPProjectStudentSuccess.csproj",
-        "packagesPath": "C:\\Users\\leeeo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\leeeo\\Documents\\Douglas College - 7th Semester\\CSIS 4050 - Advanced OO Prog for Bus App\\FPProjectStudentSuccess\\FinalProject-CSIS-4050\\FPProjectStudentSuccess\\obj\\",
+        "projectPath": "C:\\Temp\\FPProjectStudentSuccess\\FinalProject-CSIS-4050\\FPProjectStudentSuccess\\FPProjectStudentSuccess.csproj",
+        "packagesPath": "C:\\Users\\henri\\.nuget\\packages\\",
+        "outputPath": "C:\\Temp\\FPProjectStudentSuccess\\FinalProject-CSIS-4050\\FPProjectStudentSuccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\leeeo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\henri\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -138,6 +152,10 @@
             "MaterialDesignThemes": {
               "target": "Package",
               "version": "[2.5.1, )"
+            },
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.2.2, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -176,7 +194,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
         }
       }
     }

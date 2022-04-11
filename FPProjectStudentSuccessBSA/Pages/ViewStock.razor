@@ -4,45 +4,60 @@
 
     @inject FPProjectStudentSuccessBSA.Service.ProductService PdtSrv
 
-        <h3>View Stock</h3>
-        <table class="table">
-            <thead class="thead">
-                <tr>
-                    <th>Name</th>
-                    <th>Publisher</th>
-                    <th>Platform</th>
-                    <th>Year</th>
-                    <th>Price</th>
-                    <th>Shelf</th>
-                    <th>Quantity</th>
-                </tr>
-            </thead>
-            <tbody>
-                @if (productList != null)
+    <h3>View Stock</h3>
+    <div class="form-group">
+        <input class="form-control" type="text" placeholder="Filter Products by Name, Publisher, Platform or Price"
+               @bind="Filter"
+               @bind:event="oninput">
+    </div>
+    <table class="table">
+        <thead class="thead">
+            <tr>
+                <th>Name</th>
+                <th>Publisher</th>
+                <th>Platform</th>
+                <th>Year</th>
+                <th>Price</th>
+                <th>Shelf</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (productList != null)
+            {
+                @foreach (var pdt in productList)
                 {
-                    @foreach (var pdt in productList)
+                    using (var ctx = new FPProjectStudentSuccessDBContext())
                     {
-                        <tr>
-                            <td>@pdt.Name</td>
-                            <td>@pdt.Publisher</td>
-                            <td>@pdt.PlataformId</td>
-                            <td>@pdt.Year</td>
-                            <td>@pdt.Price</td>
-                            <td>@pdt.ShelfId</td>
-                            <td>@pdt.Quantity</td>
-                        </tr>
+                        var getPlataform = ctx.Plataform.Where(x => x.Id == pdt.PlataformId).First();
+                        Plataform = getPlataform.Name;
                     }
+
+                    if (!IsVisible(pdt))
+                        continue;
+                    <tr>
+                        <td>@pdt.Name</td>
+                        <td>@pdt.Publisher</td>
+                        <td>@Plataform</td>
+                        <td>@pdt.Year</td>
+                        <td>@pdt.Price</td>
+                        <td>@pdt.ShelfId</td>
+                        <td>@pdt.Quantity</td>
+                    </tr>
                 }
-                else
-                {
-                    <p><em>Loading...</em></p>
-                }
-            </tbody>
-        </table>
+            }
+            else
+            {
+                <p><em>Loading...</em></p>
+            }
+        </tbody>
+    </table>
 </AuthorizeView>
 
 @code {
     public List<Product> productList = new List<Product>();
+    public string Filter { get; set; }
+    public string Plataform { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
@@ -52,5 +67,15 @@
     protected async Task LoadData()
     {
         productList = await PdtSrv.GetProductsAsync();
+    }
+
+    public bool IsVisible(Product product)
+    {
+        if (string.IsNullOrEmpty(Filter)) { return true; }
+        else if (product.Name.Contains(Filter, StringComparison.OrdinalIgnoreCase)){ return true; }
+        else if (product.Publisher.Contains(Filter, StringComparison.OrdinalIgnoreCase)) { return true; }
+        else if (Plataform.Contains(Filter, StringComparison.OrdinalIgnoreCase)) { return true; }
+        else if (product.Price.ToString().StartsWith(Filter)) { return true; }
+        else { return false; }
     }
 }

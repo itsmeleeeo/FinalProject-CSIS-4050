@@ -23,6 +23,7 @@ namespace FPProjectStudentSuccessBSA.Service
         {
             List<Product> IGDBList = new List<Product>();
 
+            //IGDB authentication
             string id;
             string key;
 
@@ -31,9 +32,13 @@ namespace FPProjectStudentSuccessBSA.Service
             key = "gskpm91w1b5cll78hws2nhvjbewaul"
            );
 
+
+            //Game query and validation
             string gameName = gamename;
             var games = await igdb.QueryAsync<Game>(IGDBClient.Endpoints.Games, query: $"fields name, " +
                 $"involved_companies,release_dates; search \"{gameName}\";");
+            
+            //Keep within free account requests
             var gamesDistincts = games.Distinct().Take(5);
 
             foreach (var g in gamesDistincts)
@@ -43,6 +48,7 @@ namespace FPProjectStudentSuccessBSA.Service
                 string dateYearFinal;
                 Product newGame = new Product();
 
+                //Validates/clean data
                 if (g.ReleaseDates != null)
                 {
                     var releaseDate = await igdb.QueryAsync<ReleaseDate>(IGDBClient.Endpoints.ReleaseDates, query: $"fields date; where id = {g.ReleaseDates.Ids.GetValue(0)};");
@@ -83,6 +89,7 @@ namespace FPProjectStudentSuccessBSA.Service
                 newGame.Price = 0;
                 newGame.ShelfId = 2;
 
+                //add to List to display on views
                 IGDBList.Add(newGame);
             }
         return IGDBList;

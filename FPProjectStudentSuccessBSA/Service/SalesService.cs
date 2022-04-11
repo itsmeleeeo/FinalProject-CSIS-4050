@@ -32,6 +32,7 @@ namespace FPProjectStudentSuccessBSA.Service
         {
             Sales sale = new Sales();
 
+            //Get FKs to add Sale
             using (var ctx = new FPProjectStudentSuccessDBContext())
             {               
                 var getPlataform = ctx.Plataform.Where(x => x.Name == plataform).First();

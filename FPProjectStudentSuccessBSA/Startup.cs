@@ -38,16 +38,24 @@ namespace FPProjectStudentSuccessBSA
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddRazorPages();
-            services.AddServerSideBlazor();            
+            services.AddServerSideBlazor();
+
+            //Database connection. Default string renamed to "FPProjectStudentSuccessDB" 
             var SQLConnectionConfig = new SQLConnectionConfig(Configuration.GetConnectionString("FPProjectStudentSuccessDB"));
-            services.AddSingleton(SQLConnectionConfig);
+            services.AddSingleton(SQLConnectionConfig);            
+            
+            //All services need a thread added here in order to work
             var ProductService = new ProductService(SQLConnectionConfig);
             var SalesService = new SalesService(SQLConnectionConfig);
             var IGDBService = new IGDBService(SQLConnectionConfig);
             services.AddSingleton(ProductService);
             services.AddSingleton(SalesService);
             services.AddSingleton(IGDBService);
+
+            //Http Context and User Context Info access
             services.AddHttpContextAccessor();
+            
+            //Blazor Auth
             services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuthenticationStateProvider<IdentityUser>>();
         }
 

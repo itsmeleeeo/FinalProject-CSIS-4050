@@ -28,11 +28,6 @@
                     <tbody>                      
                         @foreach (var pdt in IGBDList)
                         {
-                            using (var ctx = new FPProjectStudentSuccessDBContext())
-                            {
-                                var getPlataform = ctx.Plataform.Where(x => x.Id == pdt.PlataformId).First();
-                                Plataform = getPlataform.Name;
-                            }
                         <tr>
                             <td>@pdt.Name</td>
                             <td>@pdt.Publisher</td>

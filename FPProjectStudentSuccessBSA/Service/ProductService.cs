@@ -32,6 +32,7 @@ namespace FPProjectStudentSuccessBSA.Service
         {
             Product newProduct = new Product();
 
+            //Get FKs to add Stock (Product table)
             using (var ctx = new FPProjectStudentSuccessDBContext())
             {
                 var getPlataform = ctx.Plataform.Where(x => x.Name == plataform).First();

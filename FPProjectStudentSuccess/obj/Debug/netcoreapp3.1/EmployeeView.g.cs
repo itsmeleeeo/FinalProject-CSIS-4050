@@ -144,7 +144,7 @@ namespace FPProjectStudentSuccess {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/FPProjectStudentSuccess;component/employeeview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/FPProjectStudentSuccess;V1.0.0.0;component/employeeview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\EmployeeView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

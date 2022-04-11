@@ -184,7 +184,7 @@ namespace FPProjectStudentSuccess {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/FPProjectStudentSuccess;component/employeedeleteview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/FPProjectStudentSuccess;V1.0.0.0;component/employeedeleteview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\EmployeeDeleteView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

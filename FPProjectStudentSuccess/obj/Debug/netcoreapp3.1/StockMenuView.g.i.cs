@@ -160,7 +160,7 @@ namespace FPProjectStudentSuccess {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/FPProjectStudentSuccess;component/stockmenuview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/FPProjectStudentSuccess;V1.0.0.0;component/stockmenuview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\StockMenuView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

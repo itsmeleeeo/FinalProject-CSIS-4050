@@ -9,7 +9,10 @@
       "FPProjectStudentSuccess/1.0.0": {
         "dependencies": {
           "MaterialDesignThemes": "2.5.1",
+<<<<<<< HEAD
           "Microsoft.AspNetCore.Http": "2.2.2",
+=======
+>>>>>>> 95b7c12573886e7550d9cbf50d9eb7e17787f1d1
           "Microsoft.EntityFrameworkCore": "3.1.22",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.22",
           "Microsoft.EntityFrameworkCore.Tools": "3.1.22",
@@ -38,6 +41,7 @@
           }
         }
       },
+<<<<<<< HEAD
       "Microsoft.AspNetCore.Http/2.2.2": {
         "dependencies": {
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
@@ -88,6 +92,8 @@
           }
         }
       },
+=======
+>>>>>>> 95b7c12573886e7550d9cbf50d9eb7e17787f1d1
       "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
         "runtime": {
           "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
@@ -306,6 +312,7 @@
           }
         }
       },
+<<<<<<< HEAD
       "Microsoft.Extensions.ObjectPool/2.2.0": {
         "runtime": {
           "lib/netstandard2.0/Microsoft.Extensions.ObjectPool.dll": {
@@ -314,6 +321,8 @@
           }
         }
       },
+=======
+>>>>>>> 95b7c12573886e7550d9cbf50d9eb7e17787f1d1
       "Microsoft.Extensions.Options/3.1.22": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.22",
@@ -410,6 +419,7 @@
           }
         }
       },
+<<<<<<< HEAD
       "Microsoft.Net.Http.Headers/2.2.0": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "3.1.22",
@@ -422,6 +432,8 @@
           }
         }
       },
+=======
+>>>>>>> 95b7c12573886e7550d9cbf50d9eb7e17787f1d1
       "Microsoft.NETCore.Platforms/3.1.0": {},
       "Microsoft.NETCore.Targets/1.1.0": {},
       "Microsoft.Win32.Registry/4.7.0": {
@@ -506,7 +518,10 @@
           }
         }
       },
+<<<<<<< HEAD
       "System.Buffers/4.5.0": {},
+=======
+>>>>>>> 95b7c12573886e7550d9cbf50d9eb7e17787f1d1
       "System.Collections/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "3.1.0",
@@ -1027,7 +1042,10 @@
           "System.Text.Encoding": "4.3.0"
         }
       },
+<<<<<<< HEAD
       "System.Text.Encodings.Web/4.5.0": {},
+=======
+>>>>>>> 95b7c12573886e7550d9cbf50d9eb7e17787f1d1
       "System.Text.RegularExpressions/4.3.0": {
         "dependencies": {
           "System.Runtime": "4.3.0"
@@ -1145,6 +1163,7 @@
       "path": "materialdesignthemes/2.5.1",
       "hashPath": "materialdesignthemes.2.5.1.nupkg.sha512"
     },
+<<<<<<< HEAD
     "Microsoft.AspNetCore.Http/2.2.2": {
       "type": "package",
       "serviceable": true,
@@ -1173,6 +1192,8 @@
       "path": "microsoft.aspnetcore.webutilities/2.2.0",
       "hashPath": "microsoft.aspnetcore.webutilities.2.2.0.nupkg.sha512"
     },
+=======
+>>>>>>> 95b7c12573886e7550d9cbf50d9eb7e17787f1d1
     "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
       "type": "package",
       "serviceable": true,
@@ -1313,6 +1334,7 @@
       "path": "microsoft.extensions.logging.abstractions/3.1.22",
       "hashPath": "microsoft.extensions.logging.abstractions.3.1.22.nupkg.sha512"
     },
+<<<<<<< HEAD
     "Microsoft.Extensions.ObjectPool/2.2.0": {
       "type": "package",
       "serviceable": true,
@@ -1320,6 +1342,8 @@
       "path": "microsoft.extensions.objectpool/2.2.0",
       "hashPath": "microsoft.extensions.objectpool.2.2.0.nupkg.sha512"
     },
+=======
+>>>>>>> 95b7c12573886e7550d9cbf50d9eb7e17787f1d1
     "Microsoft.Extensions.Options/3.1.22": {
       "type": "package",
       "serviceable": true,
@@ -1376,6 +1400,7 @@
       "path": "microsoft.identitymodel.tokens/5.5.0",
       "hashPath": "microsoft.identitymodel.tokens.5.5.0.nupkg.sha512"
     },
+<<<<<<< HEAD
     "Microsoft.Net.Http.Headers/2.2.0": {
       "type": "package",
       "serviceable": true,
@@ -1383,6 +1408,8 @@
       "path": "microsoft.net.http.headers/2.2.0",
       "hashPath": "microsoft.net.http.headers.2.2.0.nupkg.sha512"
     },
+=======
+>>>>>>> 95b7c12573886e7550d9cbf50d9eb7e17787f1d1
     "Microsoft.NETCore.Platforms/3.1.0": {
       "type": "package",
       "serviceable": true,
@@ -1446,6 +1473,7 @@
       "path": "runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0",
       "hashPath": "runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512"
     },
+<<<<<<< HEAD
     "System.Buffers/4.5.0": {
       "type": "package",
       "serviceable": true,
@@ -1453,6 +1481,8 @@
       "path": "system.buffers/4.5.0",
       "hashPath": "system.buffers.4.5.0.nupkg.sha512"
     },
+=======
+>>>>>>> 95b7c12573886e7550d9cbf50d9eb7e17787f1d1
     "System.Collections/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -1845,6 +1875,7 @@
       "path": "system.text.encoding.extensions/4.3.0",
       "hashPath": "system.text.encoding.extensions.4.3.0.nupkg.sha512"
     },
+<<<<<<< HEAD
     "System.Text.Encodings.Web/4.5.0": {
       "type": "package",
       "serviceable": true,
@@ -1852,6 +1883,8 @@
       "path": "system.text.encodings.web/4.5.0",
       "hashPath": "system.text.encodings.web.4.5.0.nupkg.sha512"
     },
+=======
+>>>>>>> 95b7c12573886e7550d9cbf50d9eb7e17787f1d1
     "System.Text.RegularExpressions/4.3.0": {
       "type": "package",
       "serviceable": true,

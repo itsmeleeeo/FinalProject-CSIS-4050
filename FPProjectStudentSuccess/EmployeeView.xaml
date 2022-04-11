@@ -29,49 +29,41 @@
             </Grid.ColumnDefinitions>
             <Grid Background="#272537" Grid.Column="1">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="4*"/>
-                    <RowDefinition Height="221*"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                <Grid Margin="0,12,0,0" Background="#272537">
-                    <Grid Height="100" Background="#272537" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="10">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="auto"/>
-                            <RowDefinition Height="auto"/>
-                            <RowDefinition Height="auto"/>
-                            <RowDefinition Height="auto"/>
-                            <RowDefinition Height="auto"/>
-                        </Grid.RowDefinitions>
-                        <Border BorderBrush="White" BorderThickness="0 0 1 0" Grid.Column="0">
-                            <TextBlock FontSize="30" Text="Sales Of The Day" Foreground="#f2f2f2" Margin="15"/>
-                        </Border>
-                        <Border BorderBrush="White" BorderThickness="0 0 1 0" Grid.Column="1">
-                            <TextBlock FontSize="30" Text="Low Stock" Foreground="#f2f2f2" Margin="15"/>
-                        </Border>
-                        <Border BorderBrush="White" BorderThickness="0 0 1 0" Grid.Column="2">
-                            <TextBlock FontSize="30" Text="R$ 60,90" Foreground="#f2f2f2" Margin="15"/>
-                        </Border>
-                        <Border BorderBrush="White" BorderThickness="0 0 1 0" Grid.Column="3">
-                            <TextBlock FontSize="30" Text="R$ 865,90" Foreground="#f2f2f2" Margin="15"/>
-                        </Border>
-                        <Border BorderBrush="White" BorderThickness="0 0 1 0" Grid.Column="0" Grid.Row="1">
-                            <TextBlock FontSize="30" Text="R$ 860,90" Foreground="#f2f2f2" Margin="15"/>
-                        </Border>
-                        <Border BorderBrush="White" BorderThickness="0 0 1 0" Grid.Column="1" Grid.Row="1">
-                            <TextBlock FontSize="30" Text="R$ 750,90" Foreground="#f2f2f2" Margin="15"/>
-                        </Border>
-                        <Border BorderBrush="White" BorderThickness="0 0 1 0" Grid.Column="2" Grid.Row="1">
-                            <TextBlock FontSize="30" Text="R$ 60,90" Foreground="#f2f2f2" Margin="15"/>
-                        </Border>
-                        <Border BorderBrush="White" BorderThickness="0 0 1 0" Grid.Column="3" Grid.Row="1">
-                            <TextBlock FontSize="30" Text="R$ 865,90" Foreground="#f2f2f2" Margin="15"/>
-                        </Border>
-                    </Grid>
+                <Grid Grid.Row="1">
+                    <DataGrid x:Name="DataGridEmployee" HorizontalAlignment="Stretch" VerticalAlignment="Top" IsReadOnly="True"/>
+                </Grid>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="btnAddEmployee" Grid.Column="1" Width="180" Height="100" Content="Add New Employee" FontFamily="Corbel" FontSize="14">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                    <Button x:Name="btnEditEmployee" Grid.Column="2" Width="180" Height="100" Content="Edit Employee" FontFamily="Corbel" FontSize="14">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                    <Button x:Name="btnDeleteEmployee" Grid.Column="3" Width="180" Height="100" Content="Delete Employee" FontFamily="Corbel" FontSize="14">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
                 </Grid>
             </Grid>
             <Grid x:Name="toolbar" Width="70" Background="#f2f2f2" RenderTransformOrigin="0.5,0.5" Grid.Column="0">

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -10,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using FPProjectStudentSuccess.Entities;
 
 namespace FPProjectStudentSuccess
 {
@@ -18,16 +20,21 @@ namespace FPProjectStudentSuccess
     /// </summary>
     public partial class EmployeeView : Window
     {
+        List<Users> usersList = new List<Users>();
         bool isClosed = false;
         public EmployeeView()
         {
             InitializeComponent();
+            InitializeEmployeeDataGrid();
 
             btnMenu.Click += OpenAndCloseMenu;
             productsMenu.Click += OpenProductPage;
             salesmenMenu.Click += OpenSalesmenPage;
             stockMenu.Click += OpenStockPage;
             logout.Click += Logout;
+            btnAddEmployee.Click += AddEmployeeView;
+            btnEditEmployee.Click += EditEmployeeView;
+            btnDeleteEmployee.Click += DeleteEmployeeView;
 
             //Menu Item visibility
             productsMenu.Visibility = Visibility.Hidden;
@@ -64,7 +71,14 @@ namespace FPProjectStudentSuccess
 
             isClosed = !isClosed;
         }
-
+        private void InitializeEmployeeDataGrid()
+        {
+            using (var ctx = new FPProjectStudentSuccessDBContext())
+            {
+                usersList = ctx.Users.ToList<Users>();
+                DataGridEmployee.ItemsSource = usersList;
+            }
+        }
         private void OpenProductPage(object o, RoutedEventArgs rea)
         {
             ProductView wProductView = new ProductView();
@@ -87,6 +101,48 @@ namespace FPProjectStudentSuccess
             foreach (Window window in Application.Current.Windows)
             {
                 if (window.GetType() == typeof(EmployeeView))
+                {
+                    window.Close();
+                }
+            }
+        }
+
+        private void AddEmployeeView(object o, RoutedEventArgs rea)
+        {
+            EmployeeAddView wAddEmployee = new EmployeeAddView();
+            wAddEmployee.Show();
+
+            foreach(Window window in Application.Current.Windows)
+            {
+                if(window.GetType() == typeof(EmployeeView))
+                {
+                    window.Close();
+                }
+            }
+        }
+
+        private void EditEmployeeView(object o, RoutedEventArgs rea)
+        {
+            EmployeeEditView wEditEmployee = new EmployeeEditView();
+            wEditEmployee.Show();
+
+            foreach(Window window in Application.Current.Windows)
+            {
+                if(window.GetType() == typeof(EmployeeView))
+                {
+                    window.Close();
+                }
+            }
+        }
+
+        private void DeleteEmployeeView(object o, RoutedEventArgs rea)
+        {
+            EmployeeDeleteView wDeleteEmployee = new EmployeeDeleteView();
+            wDeleteEmployee.Show();
+
+            foreach(Window window in Application.Current.Windows)
+            {
+                if(window.GetType() == typeof(EmployeeView))
                 {
                     window.Close();
                 }

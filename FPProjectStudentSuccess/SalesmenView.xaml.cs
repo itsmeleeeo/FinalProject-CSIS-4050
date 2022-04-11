@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -10,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using FPProjectStudentSuccess.Entities;
 
 namespace FPProjectStudentSuccess
 {
@@ -18,10 +20,14 @@ namespace FPProjectStudentSuccess
     /// </summary>
     public partial class SalesmenView : Window
     {
+        List<Sales> salesList = new List<Sales>();
+        List<Sales> salesFiltered = new List<Sales>();
         bool isClosed = false;
         public SalesmenView()
         {
             InitializeComponent();
+            InitializeDataGridSalesMen();
+            UpdateDataGrid();
 
             //Event Handlers
             btnMenu.Click += OpenAndCloseMenu;
@@ -29,6 +35,8 @@ namespace FPProjectStudentSuccess
             stockMenu.Click += OpenStockPage;
             employeeMenu.Click += OpenEmployeePage;
             logout.Click += Logout;
+            txtSearchName.TextChanged += SearchByName;
+            txtSearchUser.TextChanged += SearchByUsername;
 
             //Menu Item visibility
             productsMenu.Visibility = Visibility.Hidden;
@@ -37,6 +45,45 @@ namespace FPProjectStudentSuccess
             employeeMenu.Visibility = Visibility.Hidden;
             logout.Visibility = Visibility.Hidden;
 
+        }
+
+        private void InitializeDataGridSalesMen()
+        {
+            using (var ctx = new FPProjectStudentSuccessDBContext())
+            {
+                salesList = ctx.Sales.ToList<Sales>();
+                DataGridSales.ItemsSource = salesList;
+            }
+        }
+
+        private void UpdateDataGrid()
+        {
+            using (var ctx = new FPProjectStudentSuccessDBContext())
+            {
+                salesFiltered = ctx.Sales.ToList<Sales>();
+                DataGridSales.ItemsSource = salesFiltered;
+            }
+        }
+
+        private void SearchByName(object o, TextChangedEventArgs ea)
+        {
+            string txtProduct = txtSearchName.Text.ToString().ToLower();
+            using (var ctx = new FPProjectStudentSuccessDBContext())
+            {
+                var product = salesList.Where(x => x.ProductName == txtProduct);
+                salesFiltered = product.ToList<Sales>();
+            }
+            UpdateDataGrid();
+        }
+
+        private void SearchByUsername(object o, TextChangedEventArgs ea)
+        {
+            int username = Convert.ToInt32(txtSearchUser.Text.ToString().ToLower());
+            using (var ctx = new FPProjectStudentSuccessDBContext())
+            {
+                var user = salesList.Where(x => x.UserId == username);
+                salesFiltered = user.ToList<Sales>();
+            }
         }
 
         private void OpenAndCloseMenu(object o, RoutedEventArgs rea)

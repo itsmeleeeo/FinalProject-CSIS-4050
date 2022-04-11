@@ -1,5 +1,4 @@
-﻿using FPProjectStudentSuccess.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,32 +11,31 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using FPProjectStudentSuccess.Entities;
 
 namespace FPProjectStudentSuccess
 {
     /// <summary>
-    /// Interaction logic for StockMenuView.xaml
+    /// Interaction logic for StockDeleteView.xaml
     /// </summary>
-    public partial class StockMenuView : Window
+    public partial class StockDeleteView : Window
     {
         List<Product> stockList = new List<Product>();
-        List<Product> stockFiltered = new List<Product>();
+        List<Product> stockFilteredList = new List<Product>();
         bool isClosed = false;
-        public StockMenuView()
+        public StockDeleteView()
         {
             InitializeComponent();
-            InitizalizeDataGridStock();
-            //Event Handlers
+            InitializeDataGrid();
+            UpdateDataGrid();
             btnMenu.Click += OpenAndCloseMenu;
             productsMenu.Click += OpenProductPage;
+            employeeMenu.Click += OpenDeleteEmployeePage;
             salesmenMenu.Click += OpenSalesmenPage;
-            employeeMenu.Click += OpenEmployeePage;
+            stockMenu.Click += OpenStockPage;
+            btnDeleteProduct.Click += DeleteProduct;
+            DataGridDeleteProduct.SelectionChanged += DeleteUserInfo;
             logout.Click += Logout;
-            txtSearch.TextChanged += SearchProduct;
-            btnAddProduct.Click += AddProductStock;
-            btnEditProduct.Click += EditProductStock;
-            btnDeleteProduct.Click += DeleteProductStock;
-
 
             //Menu Item visibility
             productsMenu.Visibility = Visibility.Hidden;
@@ -47,7 +45,6 @@ namespace FPProjectStudentSuccess
             logout.Visibility = Visibility.Hidden;
         }
 
-        //Function responsible to open and close the menu sidebar
         private void OpenAndCloseMenu(object o, RoutedEventArgs rea)
         {
             if (isClosed)
@@ -75,69 +72,70 @@ namespace FPProjectStudentSuccess
             isClosed = !isClosed;
         }
 
-        private void InitizalizeDataGridStock()
+        private void InitializeDataGrid()
         {
             using (var ctx = new FPProjectStudentSuccessDBContext())
             {
                 stockList = ctx.Product.ToList<Product>();
-                DataGridStock.ItemsSource = stockList;
+                DataGridDeleteProduct.ItemsSource = stockList;
             }
         }
 
         private void UpdateDataGrid()
         {
-            DataGridStock.ItemsSource = stockFiltered;
-        }
-
-        private void SearchProduct(object o, TextChangedEventArgs ea) 
-        {
-            string txtProduct = txtSearch.Text.ToString().ToLower();
-
-            var stockSearch = from p in stockList
-                              where p.Name.Contains(txtProduct) select p;
-            stockFiltered = stockSearch.ToList();
-
-            UpdateDataGrid();
-        }
-
-        private void AddProductStock(object o, RoutedEventArgs ea)
-        {
-            StockAddView wAddView = new StockAddView();
-            wAddView.Show();
-
-            foreach(Window window in Application.Current.Windows)
+            using (var ctx = new FPProjectStudentSuccessDBContext())
             {
-                if(window.GetType() == typeof(StockMenuView))
-                {
-                    window.Close();
-                }
+                stockFilteredList = ctx.Product.ToList<Product>();
+                DataGridDeleteProduct.ItemsSource = stockFilteredList;
             }
         }
 
-        private void EditProductStock(object o, RoutedEventArgs ea)
+        private void DeleteUserInfo(object o, EventArgs ea)
         {
-            StockEditView wEditView = new StockEditView();
-            wEditView.Show();
-
-            foreach(Window window in Application.Current.Windows)
+            if (DataGridDeleteProduct.SelectedItem != null)
             {
-                if(window.GetType() == typeof(StockMenuView))
-                {
-                    window.Close();
-                }
+                Product ProductToBeDeleted = (Product)DataGridDeleteProduct.SelectedItem;
+
+                txtPrice.Text = ProductToBeDeleted.Price.ToString();
+                txtProductName.Text = ProductToBeDeleted.Name.ToString();
+                txtPublisher.Text = ProductToBeDeleted.Publisher.ToString();
+                txtQuantity.Text = ProductToBeDeleted.Quantity.ToString();
+                txtShelf.Text = ProductToBeDeleted.ShelfId.ToString();
+                txtYear.Text = ProductToBeDeleted.Year.ToString();
+                txtProductId.Text = ProductToBeDeleted.Id.ToString();
+                cmbBoxPlatform.SelectedItem = ProductToBeDeleted.PlataformId.ToString();
             }
         }
 
-        private void DeleteProductStock(object o, RoutedEventArgs ea)
+        private void DeleteProduct(object o, EventArgs ea)
         {
-            StockDeleteView wDeleteView = new StockDeleteView();
-            wDeleteView.Show();
-
-            foreach(Window window in Application.Current.Windows)
+            using (var ctx = new FPProjectStudentSuccessDBContext())
             {
-                if(window.GetType() == typeof(StockMenuView))
+                Product productToBeDeleted = ctx.Product.Where(x => x.Id == Convert.ToInt32(txtProductId.Text)).First();
+                if (MessageBox.Show("Do you want to delete this Product?", "Confirmation", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                 {
-                    window.Close();
+                    ctx.Product.Remove(productToBeDeleted);
+                    ctx.SaveChanges();
+                    UpdateDataGrid();
+                }
+            }
+
+            txtPrice.Text = "";
+            txtProductName.Text = "";
+            txtPublisher.Text = "";
+            txtQuantity.Text = "";
+            txtShelf.Text = "";
+            txtYear.Text = "";
+            txtProductId.Text = "";
+
+            AdminOverview wAdminOverView = new AdminOverview();
+            wAdminOverView.Show();
+
+            foreach (Window Window in Application.Current.Windows)
+            {
+                if (Window.GetType() == typeof(StockDeleteView))
+                {
+                    Window.Close();
                 }
             }
         }
@@ -149,7 +147,21 @@ namespace FPProjectStudentSuccess
 
             foreach (Window window in Application.Current.Windows)
             {
-                if (window.GetType() == typeof(StockMenuView))
+                if (window.GetType() == typeof(StockDeleteView))
+                {
+                    window.Close();
+                }
+            }
+        }
+
+        private void OpenDeleteEmployeePage(object o, RoutedEventArgs rea)
+        {
+            EmployeeView wEmployeeView = new EmployeeView();
+            wEmployeeView.Show();
+
+            foreach (Window window in Application.Current.Windows)
+            {
+                if (window.GetType() == typeof(StockDeleteView))
                 {
                     window.Close();
                 }
@@ -163,21 +175,21 @@ namespace FPProjectStudentSuccess
 
             foreach (Window window in Application.Current.Windows)
             {
-                if (window.GetType() == typeof(StockMenuView))
+                if (window.GetType() == typeof(StockDeleteView))
                 {
                     window.Close();
                 }
             }
         }
 
-        private void OpenEmployeePage(object o, RoutedEventArgs rea)
+        private void OpenStockPage(object o, RoutedEventArgs rea)
         {
-            EmployeeView wEmployeeView = new EmployeeView();
-            wEmployeeView.Show();
+            StockMenuView wstockMenuView = new StockMenuView();
+            wstockMenuView.Show();
 
             foreach (Window window in Application.Current.Windows)
             {
-                if (window.GetType() == typeof(StockMenuView))
+                if (window.GetType() == typeof(StockDeleteView))
                 {
                     window.Close();
                 }
@@ -191,7 +203,7 @@ namespace FPProjectStudentSuccess
 
             foreach (Window window in Application.Current.Windows)
             {
-                if (window.GetType() == typeof(StockMenuView))
+                if (window.GetType() == typeof(StockDeleteView))
                 {
                     window.Close();
                 }

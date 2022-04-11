@@ -26,98 +26,9 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="1">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <Grid Margin="0,12,0,0">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-                    <Grid Height="auto" Background="#272537" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="10">
-                        <TextBlock FontSize="22" Text="Sales Of The Day" TextWrapping="Wrap" Foreground="#f2f2f2" Margin="15" HorizontalAlignment="Center"/>
-                    </Grid>
-                    <Grid Height="auto" Background="#272537" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="10" Grid.Row="1">
-                        <TextBlock FontSize="22" Text="$0" TextWrapping="Wrap" Foreground="#f2f2f2" Margin="15" HorizontalAlignment="Center"/>
-                    </Grid>
-                </Grid>
-                <Grid Margin="0,12,0,0" Grid.Row="1">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-                    <Grid Height="auto" Background="#272537" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="10">
-                        <TextBlock FontSize="22" Text="Sales Of The Day" TextWrapping="Wrap" Foreground="#f2f2f2" Margin="15" HorizontalAlignment="Center"/>
-                    </Grid>
-                    <Grid Height="auto" Background="#272537" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="10" Grid.Row="1">
-                        <TextBlock FontSize="22" Text="$0" TextWrapping="Wrap" Foreground="#f2f2f2" Margin="15" HorizontalAlignment="Center"/>
-                    </Grid>
-                </Grid>
-            </Grid>
-            <Grid Grid.Column="2">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <Grid Margin="0,12,0,0">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-                    <Grid Height="auto" Background="#272537" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="10">
-                        <TextBlock FontSize="22" Text="Low Stock" TextWrapping="Wrap" Foreground="#f2f2f2" Margin="15" HorizontalAlignment="Center"/>
-                    </Grid>
-                    <Grid Height="auto" Background="#272537" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="10" Grid.Row="1">
-                        <TextBlock FontSize="22" Text="0" TextWrapping="Wrap" Foreground="#f2f2f2" Margin="15" HorizontalAlignment="Center"/>
-                    </Grid>
-                </Grid>
-                <Grid Margin="0,12,0,0" Grid.Row="1">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-                    <Grid Height="auto" Background="#272537" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="10">
-                        <TextBlock FontSize="22" Text="Low Stock" TextWrapping="Wrap" Foreground="#f2f2f2" Margin="15" HorizontalAlignment="Center"/>
-                    </Grid>
-                    <Grid Height="auto" Background="#272537" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="10" Grid.Row="1">
-                        <TextBlock FontSize="22" Text="$0" TextWrapping="Wrap" Foreground="#f2f2f2" Margin="15" HorizontalAlignment="Center"/>
-                    </Grid>
-                </Grid>
-            </Grid>
-            <Grid Grid.Column="3">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <Grid Margin="0,12,0,0">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-                    <Grid Height="auto" Background="#272537" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="10">
-                        <TextBlock FontSize="22" Text="Cash Flow" TextWrapping="Wrap" Foreground="#f2f2f2" Margin="15" HorizontalAlignment="Center"/>
-                    </Grid>
-                    <Grid Height="auto" Background="#272537" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="10" Grid.Row="1">
-                        <TextBlock FontSize="22" Text="$0" TextWrapping="Wrap" Foreground="#f2f2f2" Margin="15" HorizontalAlignment="Center"/>
-                    </Grid>
-                </Grid>
-                <Grid Margin="0,12,0,0" Grid.Row="1">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-                    <Grid Height="auto" Background="#272537" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="10">
-                        <TextBlock FontSize="22" Text="Cash Flow" TextWrapping="Wrap" Foreground="#f2f2f2" Margin="15" HorizontalAlignment="Center"/>
-                    </Grid>
-                    <Grid Height="auto" Background="#272537" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="10" Grid.Row="1">
-                        <TextBlock FontSize="22" Text="$0" TextWrapping="Wrap" Foreground="#f2f2f2" Margin="15" HorizontalAlignment="Center"/>
-                    </Grid>
-            </Grid>
+                <Image x:Name="imgLog" Source="/Game Depot-logos_white.png" HorizontalAlignment="Center" Height="auto" Width="auto"/>
             </Grid>
             <Grid x:Name="toolbar" Width="70" Background="#f2f2f2" RenderTransformOrigin="0.5,0.5" Grid.Column="0">
                 <Button x:Name="btnMenu" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10" Width="50" Height="50" Background="Transparent" BorderBrush="Transparent">

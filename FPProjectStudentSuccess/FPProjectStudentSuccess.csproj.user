@@ -10,6 +10,15 @@
     <Compile Update="AdminOverview.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="EmployeeAddView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="EmployeeDeleteView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="EmployeeEditView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="EmployeeView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -19,12 +28,30 @@
     <Compile Update="SalesmenView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="StockAddView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="StockDeleteView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="StockEditView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="StockMenuView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="AdminOverview.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="EmployeeAddView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="EmployeeDeleteView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="EmployeeEditView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="EmployeeView.xaml">
@@ -37,6 +64,15 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="SalesmenView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="StockAddView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="StockDeleteView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="StockEditView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="StockMenuView.xaml">

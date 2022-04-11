@@ -136,7 +136,7 @@ namespace FPProjectStudentSuccess
                 }
             }
         }
-
+        //Initializing combo box for user position
         private void InitializeComboBox()
         {
             cmbBoxPosition.Items.Add("Manager");

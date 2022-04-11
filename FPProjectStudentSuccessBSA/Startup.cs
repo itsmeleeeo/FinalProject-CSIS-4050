@@ -43,8 +43,10 @@ namespace FPProjectStudentSuccessBSA
             services.AddSingleton(SQLConnectionConfig);
             var ProductService = new ProductService(SQLConnectionConfig);
             var SalesService = new SalesService(SQLConnectionConfig);
+            var IGDBService = new IGDBService(SQLConnectionConfig);
             services.AddSingleton(ProductService);
             services.AddSingleton(SalesService);
+            services.AddSingleton(IGDBService);
             services.AddHttpContextAccessor();
             services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuthenticationStateProvider<IdentityUser>>();
         }

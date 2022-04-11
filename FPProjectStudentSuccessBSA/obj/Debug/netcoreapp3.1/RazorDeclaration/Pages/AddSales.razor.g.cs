@@ -98,13 +98,27 @@ using Microsoft.AspNetCore.Http;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 70 "C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\Pages\AddSales.razor"
+#line 111 "C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\Pages\AddSales.razor"
        
     string name = "";
     string plataform = "";
     int quantity = 0;
     decimal salestotal = 0;
     string email = "";
+
+    public List<Product> IGBDList = new List<Product>();
+
+    public string Filter { get; set; }
+
+    protected void Edit(Product pdt)
+    {
+        name = pdt.Name;
+    }
+
+    protected async Task LoadData()
+    {
+        IGBDList = await IGDBSrv.GetIGDB(Filter);
+    }
 
     protected override void OnInitialized()
     {
@@ -120,6 +134,7 @@ using Microsoft.AspNetCore.Http;
 #line hidden
 #nullable disable
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private FPProjectStudentSuccessBSA.Service.SalesService SaleSrv { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private FPProjectStudentSuccessBSA.Service.IGDBService IGDBSrv { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private IHttpContextAccessor httpContextAccessor { get; set; }
     }
 }

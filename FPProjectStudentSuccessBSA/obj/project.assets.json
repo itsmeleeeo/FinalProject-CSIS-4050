@@ -22,6 +22,18 @@
           "buildMultiTargeting/Blazored.Toast.props": {}
         }
       },
+      "IGDB/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "RestEase": "1.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IGDB.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IGDB.dll": {}
+        }
+      },
       "MaterialDesignColors/1.1.2": {
         "type": "package",
         "compile": {
@@ -743,6 +755,18 @@
         },
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "RestEase/1.5.5": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "11.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.1/RestEase.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/RestEase.dll": {}
         }
       },
       "runtime.native.System/4.3.0": {
@@ -1795,6 +1819,18 @@
         "lib/netstandard2.1/Blazored.Toast.dll",
         "staticwebassets/blazored-toast.css",
         "staticwebassets/blazored-toast.min.css"
+      ]
+    },
+    "IGDB/2.2.0": {
+      "sha512": "cS42X/+Hru4n2aN64rqOLgStodFYngsG3rEltDgDJCxEzjlDTiShNxSiKbnMGYnEBndHGW5okEB+dteKTJw9/A==",
+      "type": "package",
+      "path": "igdb/2.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "igdb.2.2.0.nupkg.sha512",
+        "igdb.nuspec",
+        "lib/netstandard2.0/IGDB.dll"
       ]
     },
     "MaterialDesignColors/1.1.2": {
@@ -3092,6 +3128,28 @@
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
         "newtonsoft.json.12.0.2.nupkg.sha512",
         "newtonsoft.json.nuspec"
+      ]
+    },
+    "RestEase/1.5.5": {
+      "sha512": "9JhAAObSV8MgrJG4teLfwaVPCnE64CRQw7YepypJgr1pKMi5peGVG+YqLjGwn+m3ucTRrhFW/sINdOusw9MYnQ==",
+      "type": "package",
+      "path": "restease/1.5.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net45/RestEase.dll",
+        "lib/net45/RestEase.xml",
+        "lib/net5.0/RestEase.dll",
+        "lib/net5.0/RestEase.xml",
+        "lib/netstandard1.1/RestEase.dll",
+        "lib/netstandard1.1/RestEase.xml",
+        "lib/netstandard2.0/RestEase.dll",
+        "lib/netstandard2.0/RestEase.xml",
+        "lib/netstandard2.1/RestEase.dll",
+        "lib/netstandard2.1/RestEase.xml",
+        "restease.1.5.5.nupkg.sha512",
+        "restease.nuspec"
       ]
     },
     "runtime.native.System/4.3.0": {
@@ -6483,12 +6541,14 @@
     ".NETCoreApp,Version=v3.1": [
       "Blazored.Toast >= 3.2.2",
       "FPProjectStudentSuccess >= 1.0.0",
+      "IGDB >= 2.2.0",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 3.1.22",
       "Microsoft.AspNetCore.Http >= 2.2.2",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 3.1.22",
       "Microsoft.AspNetCore.Identity.UI >= 3.1.22",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.22",
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.22",
+      "RestEase >= 1.5.5",
       "System.Data.SqlClient >= 4.8.3"
     ]
   },
@@ -6543,6 +6603,10 @@
             "target": "Package",
             "version": "[3.2.2, )"
           },
+          "IGDB": {
+            "target": "Package",
+            "version": "[2.2.0, )"
+          },
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
             "target": "Package",
             "version": "[3.1.22, )"
@@ -6566,6 +6630,10 @@
           "Microsoft.EntityFrameworkCore.Tools": {
             "target": "Package",
             "version": "[3.1.22, )"
+          },
+          "RestEase": {
+            "target": "Package",
+            "version": "[1.5.5, )"
           },
           "System.Data.SqlClient": {
             "target": "Package",

@@ -124,3 +124,5 @@ C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBS
 C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Components.Web.dll
 C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Metadata.dll
 C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\bin\Debug\netcoreapp3.1\Microsoft.JSInterop.dll
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\bin\Debug\netcoreapp3.1\IGDB.dll
+C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\bin\Debug\netcoreapp3.1\RestEase.dll

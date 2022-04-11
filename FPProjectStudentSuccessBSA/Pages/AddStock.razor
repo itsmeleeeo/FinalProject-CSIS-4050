@@ -2,51 +2,95 @@
     @page "/addstock"
     @using FPProjectStudentSuccess.Entities;
 
+    @inject FPProjectStudentSuccessBSA.Service.IGDBService IGDBSrv
     @inject FPProjectStudentSuccessBSA.Service.ProductService PdtSrv
 
     <h3>Add Stock</h3>
+    <div class="form-group">
+        <input class="form-control" type="text" placeholder="Search Game name on IGDB..."
+               @bind="Filter"
+               @bind:event="oninput">
+        <br />
+        <button type="button" class="btn btn-primary" @onclick="LoadData">Search IGDB</button>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">Product Name</th>
+                            <th scope="col">Publisher</th>
+                            <th scope="col">Year</th>
+                            <th scope="col">Use This</th>
+                        </tr>
+                    </thead>
+                    <tbody>                      
+                        @foreach (var pdt in IGBDList)
+                        {
+                            using (var ctx = new FPProjectStudentSuccessDBContext())
+                            {
+                                var getPlataform = ctx.Plataform.Where(x => x.Id == pdt.PlataformId).First();
+                                Plataform = getPlataform.Name;
+                            }
+                        <tr>
+                            <td>@pdt.Name</td>
+                            <td>@pdt.Publisher</td>
+                            <td>@pdt.Year</td>
+                            <td>
+                                <button type="button" class="btn btn-success" style="height:25px; width:auto" @onclick="@(() => Edit(pdt))">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16" style="display:flex; align-items:center;">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" /></svg></button>
+                            </td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
     <form class="row g-3">
         <div class="col-md-6">
             <label for="inputName" class="form-label"><b>Product Name</b></label>
-            <input type="text" class="form-control" id="inputName" @bind="name">
+            <input type="text" class="form-control" id="inputName" @bind="name" readonly>
         </div>
         <div class="col-md-6">
             <label for="inputPublisher" class="form-label"><b>Publisher</b></label>
-            <input type="text" class="form-control" id="inputPublisher" @bind="publisher">
+            <input type="text" class="form-control" id="inputPublisher" @bind="publisher" readonly>
         </div>
         <div class="col-md-6">
             <label for="inputPlataform" class="form-label"><b>Plataform</b></label>
             <div>
                 <label>
-                    <input type="radio" value="PC" name="plataform" aria-label="PC" id="PC" @onclick="@(()=>plataform = "PC")" /> PC
+                    <input type="radio" value="PC" name="plataform" aria-label="PC" id="PC" @onclick="@(()=>Plataform = "PC")" /> PC
                 </label>
             </div>
             <div>
                 <label>
                     <input type="radio" value="XBOXX" name="plataform" aria-label="XBOXX" id="XBOXX"
-                           @onclick="@(()=>plataform = "XBox Series X")" /> XBox Series X
+                           @onclick="@(()=>Plataform = "XBox Series X")" /> XBox Series X
                 </label>
             </div>
             <div>
                 <label>
                     <input type="radio" value="XBOX1" name="plataform" aria-label="XBOX1" id="XBOX1"
-                           @onclick="@(()=>plataform = "XBox One")" /> XBox One
+                           @onclick="@(()=>Plataform = "XBox One")" /> XBox One
                 </label>
             </div>
             <div>
                 <label>
-                    <input type="radio" value="PS5" name="plataform" aria-label="PS5" id="PS5" @onclick="@(()=>plataform = "PS5")" /> PS5
+                    <input type="radio" value="PS5" name="plataform" aria-label="PS5" id="PS5" @onclick="@(()=>Plataform = "PS5")" /> PS5
                 </label>
             </div>
             <div>
                 <label>
-                    <input type="radio" value="PS4" name="plataform" aria-label="PS4" id="PS4" @onclick="@(()=>plataform = "PS4")" /> PS4
+                    <input type="radio" value="PS4" name="plataform" aria-label="PS4" id="PS4" @onclick="@(()=>Plataform = "PS4")" /> PS4
                 </label>
             </div>
             <div>
                 <label>
                     <input type="radio" value="Switch" name="plataform" aria-label="Switch" id="SWITCH"
-                           @onclick="@(()=>plataform = "Nintendo Switch")" /> Nintendo Switch
+                           @onclick="@(()=>Plataform = "Nintendo Switch")" /> Nintendo Switch
                 </label>
             </div>
         </div>
@@ -56,7 +100,7 @@
         </div>
         <div class="col-md-6">
             <label for="inputYear" class="form-label"><b>Year</b></label>
-            <input type="number" class="form-control" id="inputYear" min="1900" max="2022" @bind="year">
+            <input type="number" class="form-control" id="inputYear" min="1900" max="2022" @bind="year" readonly>
         </div>
         <div class="col-md-6">
             <label for="inputPrice" class="form-label"><b>Price</b></label>
@@ -75,13 +119,34 @@
 @code {
     string name = "";
     string publisher = "";
-    string plataform = "";
     int quantity = 0;
     int year = 2022;
     decimal price = 0;
 
+    public List<Product> IGBDList = new List<Product>();
+
+    public string Filter { get; set; }
+    public string Plataform { get; set; }
+
+    protected void Edit(Product pdt)
+    {
+        name = pdt.Name;
+        publisher = pdt.Publisher;
+        using (var ctx = new FPProjectStudentSuccessDBContext())
+        {
+            var getPlataform = ctx.Plataform.Where(x => x.Id == pdt.PlataformId).First();
+            Plataform = getPlataform.Name;
+        }
+        year = pdt.Year;
+    }
+
+    protected async Task LoadData()
+    {
+        IGBDList = await IGDBSrv.GetIGDB(Filter);
+    }
+
     protected async Task SubmitData()
     {
-        await PdtSrv.InsertProductAsync(name, publisher, plataform, quantity, year, price);
+        await PdtSrv.InsertProductAsync(name, publisher, Plataform, quantity, year, price);
     }
 }

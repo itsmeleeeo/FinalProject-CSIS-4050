@@ -33,12 +33,14 @@
         "dependencies": {
           "Blazored.Toast": "3.2.2",
           "FPProjectStudentSuccess": "1.0.0",
+          "IGDB": "2.2.0",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "3.1.22",
           "Microsoft.AspNetCore.Http": "2.2.2",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.22",
           "Microsoft.AspNetCore.Identity.UI": "3.1.22",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.22",
           "Microsoft.EntityFrameworkCore.Tools": "3.1.22",
+          "RestEase": "1.5.5",
           "System.Data.SqlClient": "4.8.3",
           "Accessibility": "4.0.0.0",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
@@ -352,6 +354,20 @@
         },
         "compile": {
           "lib/netstandard2.1/Blazored.Toast.dll": {}
+        }
+      },
+      "IGDB/2.2.0": {
+        "dependencies": {
+          "RestEase": "1.5.5"
+        },
+        "runtime": {
+          "lib/netstandard2.0/IGDB.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/IGDB.dll": {}
         }
       },
       "MaterialDesignColors/1.1.2": {
@@ -1041,6 +1057,20 @@
         },
         "compile": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "RestEase/1.5.5": {
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.1/RestEase.dll": {
+            "assemblyVersion": "1.5.5.0",
+            "fileVersion": "1.5.5.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.1/RestEase.dll": {}
         }
       },
       "runtime.native.System/4.3.0": {
@@ -3430,6 +3460,13 @@
       "path": "blazored.toast/3.2.2",
       "hashPath": "blazored.toast.3.2.2.nupkg.sha512"
     },
+    "IGDB/2.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cS42X/+Hru4n2aN64rqOLgStodFYngsG3rEltDgDJCxEzjlDTiShNxSiKbnMGYnEBndHGW5okEB+dteKTJw9/A==",
+      "path": "igdb/2.2.0",
+      "hashPath": "igdb.2.2.0.nupkg.sha512"
+    },
     "MaterialDesignColors/1.1.2": {
       "type": "package",
       "serviceable": true,
@@ -3821,6 +3858,13 @@
       "sha512": "sha512-rTK0s2EKlfHsQsH6Yx2smvcTCeyoDNgCW7FEYyV01drPlh2T243PR2DiDXqtC5N4GDm4Ma/lkxfW5a/4793vbA==",
       "path": "newtonsoft.json/12.0.2",
       "hashPath": "newtonsoft.json.12.0.2.nupkg.sha512"
+    },
+    "RestEase/1.5.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9JhAAObSV8MgrJG4teLfwaVPCnE64CRQw7YepypJgr1pKMi5peGVG+YqLjGwn+m3ucTRrhFW/sINdOusw9MYnQ==",
+      "path": "restease/1.5.5",
+      "hashPath": "restease.1.5.5.nupkg.sha512"
     },
     "runtime.native.System/4.3.0": {
       "type": "package",

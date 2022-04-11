@@ -91,24 +91,46 @@ using FPProjectStudentSuccess.Entities;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 75 "C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\Pages\AddStock.razor"
+#line 119 "C:\Temp\FPProjectStudentSuccess\FinalProject-CSIS-4050\FPProjectStudentSuccessBSA\Pages\AddStock.razor"
        
     string name = "";
     string publisher = "";
-    string plataform = "";
     int quantity = 0;
     int year = 2022;
     decimal price = 0;
 
+    public List<Product> IGBDList = new List<Product>();
+
+    public string Filter { get; set; }
+    public string Plataform { get; set; }
+
+    protected void Edit(Product pdt)
+    {
+        name = pdt.Name;
+        publisher = pdt.Publisher;
+        using (var ctx = new FPProjectStudentSuccessDBContext())
+        {
+            var getPlataform = ctx.Plataform.Where(x => x.Id == pdt.PlataformId).First();
+            Plataform = getPlataform.Name;
+        }
+        year = pdt.Year;
+    }
+
+    protected async Task LoadData()
+    {
+        IGBDList = await IGDBSrv.GetIGDB(Filter);
+    }
+
     protected async Task SubmitData()
     {
-        await PdtSrv.InsertProductAsync(name, publisher, plataform, quantity, year, price);
+        await PdtSrv.InsertProductAsync(name, publisher, Plataform, quantity, year, price);
     }
 
 #line default
 #line hidden
 #nullable disable
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private FPProjectStudentSuccessBSA.Service.ProductService PdtSrv { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private FPProjectStudentSuccessBSA.Service.IGDBService IGDBSrv { get; set; }
     }
 }
 #pragma warning restore 1591

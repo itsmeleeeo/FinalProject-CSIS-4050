@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "uStyi1x7cq0t7x9Xsbqb5d1jqfsajGbgC2+TmUZM1l7jOHhLSZ9h9zIZCtchhYLbsmKRPKx/5tbreiQRwpl47Q==",
+  "dgSpecHash": "uqgCAauBzebqBnIlh+MuefemfG3A0XaEmyhESaz8/xIGiJiOMGAyTpsGywGih/GKZuOzJ57S7pBqK6+5trvV4A==",
   "success": true,
   "projectFilePath": "C:\\Temp\\FPProjectStudentSuccess\\FinalProject-CSIS-4050\\FPProjectStudentSuccessBSA\\FPProjectStudentSuccessBSA.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\henri\\.nuget\\packages\\blazored.toast\\3.2.2\\blazored.toast.3.2.2.nupkg.sha512",
+    "C:\\Users\\henri\\.nuget\\packages\\igdb\\2.2.0\\igdb.2.2.0.nupkg.sha512",
     "C:\\Users\\henri\\.nuget\\packages\\materialdesigncolors\\1.1.2\\materialdesigncolors.1.1.2.nupkg.sha512",
     "C:\\Users\\henri\\.nuget\\packages\\materialdesignthemes\\2.5.1\\materialdesignthemes.2.5.1.nupkg.sha512",
     "C:\\Users\\henri\\.nuget\\packages\\microsoft.aspnetcore.authorization\\3.1.6\\microsoft.aspnetcore.authorization.3.1.6.nupkg.sha512",
@@ -61,6 +62,7 @@
     "C:\\Users\\henri\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\henri\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\henri\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
+    "C:\\Users\\henri\\.nuget\\packages\\restease\\1.5.5\\restease.1.5.5.nupkg.sha512",
     "C:\\Users\\henri\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\henri\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
     "C:\\Users\\henri\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
